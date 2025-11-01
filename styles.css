@@ -1,0 +1,570 @@
+/* ======= STYLES GÉNÉRAUX ======= */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+.banner {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* centre horizontalement */
+}
+
+
+main {
+    background-color: #333; /* gris foncé uniforme pour toutes les pages */
+    color: white; /* texte blanc */
+    padding: 40px 20px;
+}
+
+
+/* ======= NAVIGATION ======= */
+nav {
+    background-color: #222;
+    padding: 10px 0;
+}
+
+.menu-container {
+    display: flex;
+    justify-content: center; /* centre tout le contenu horizontalement */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* évite la casse sur petits écrans */
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: orange;
+}
+
+/* ======= ICÔNES SOCIALES ======= */
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.social-icon.fb { background-color: #1877F2; }
+.social-icon.ig { background-color: #E1306C; }
+.social-icon.tt { background-color: #000000; }
+
+.social-icon:hover {
+    opacity: 0.8;
+}
+
+/* ======= INTRO / PAGE D’ACCUEIL ======= */
+.home-content {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fbeed3; /* fond beige */
+    color: #222; /* texte par défaut bien lisible */
+}
+
+.intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Style du texte principal */
+.intro h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.intro h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: white;
+}
+
+/* Encart beige avec deux vidéos côte à côte */
+.video-section {
+    background-color: #f9f4e8;
+    border-radius: 12px;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.video-wrapper {
+    flex: 1 1 45%;
+    max-width: 500px;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px;
+}
+
+/* ======= ENCADRES VIDÉOS ACCUEIL ======= */
+.videos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.video-card {
+    background-color: #fbeed3; /* beige clair */
+    padding: 20px;
+    border-radius: 12px;
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.video-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.video-card .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* ratio 16:9 */
+    height: 0;
+}
+
+.video-card .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ======= BOUTONS ======= */
+.btn {
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.btn.orange {
+    background-color: orange;
+    color: white;
+}
+
+.btn.blue {
+    background-color: #007BFF;
+    color: white;
+}
+
+
+/* ======= SECTION ACCUEIL (INDEX.HTML)  ======= */
+
+
+.intact-image {
+    width: 400px; /* ou un max-width */
+    height: auto;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px; /* ou la largeur que tu souhaites */
+  margin: 20px auto; /* centre la vidéo */
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* ======= SECTION DATES ======= */
+.dates-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.dates-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.dates-table th, .dates-table td {
+    text-align: left;
+    padding: 12px;
+}
+
+.dates-table th {
+    border-bottom: 2px solid #fff;
+}
+
+/* ======= RÉPERTOIRE ======= */
+/* Répertoire : fond gris et textes blancs */
+.repertoire-section {
+    background-color: #222; /* gris foncé */
+    padding: 40px 20px;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Titres principaux : COMPOSITIONS / REPRISES */
+.repertoire-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Titres secondaires : références aux albums */
+.repertoire-section h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+/* Titres de niveau 3 : titres des chansons */
+.repertoire-section li {
+    font-size: 18px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+
+/* Pour les listes */
+.repertoire-section ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+/* Responsive : taille du texte plus petite sur mobile */
+@media (max-width: 768px) {
+    .repertoire-section h2 { font-size: 28px; }
+    .repertoire-section h3 { font-size: 20px; }
+    .repertoire-section li { font-size: 16px; }
+}
+
+
+
+/* ======= PHOTOS & VIDÉOS ======= */
+.media-section {
+    background-color: #fbeed3;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.media-section h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.media-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    padding: 15px;
+}
+
+.media-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.media-item p {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* ======= PIED DE PAGE ======= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* ======= PAGE BOUTIQUE ======= */
+.main-content {
+    background-color: #333; /* fond gris foncé comme les autres pages */
+    color: white; /* texte blanc */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 36px;
+    color: white; /* titre en blanc */
+    margin-bottom: 10px;
+}
+
+.main-content .intro {
+    background: none;
+    padding: 0;
+    margin-bottom: 40px;
+    color: white; /* tout le texte de l’intro en blanc */
+}
+
+.main-content .intro p {
+    color: white; /* force aussi la couleur blanche sur le paragraphe */
+}
+
+.mail-link {
+    color: #4aa3ff; /* bleu clair plus lisible sur fond foncé */
+    font-weight: bold;
+}
+
+.products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.product {
+    background-color: #fbeed3; /* beige pour les encarts */
+    border-radius: 12px;
+    padding: 20px;
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    text-align: center;
+    color: #222; /* texte sombre pour contraste */
+}
+
+.product img {
+    width: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.product p {
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Responsive : sur mobile, les produits passent en colonne */
+@media (max-width: 768px) {
+    .products-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .menu-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+	
+	.video-section {
+        flex-direction: column;
+    }
+	
+	.repertoire-section h2 { font-size: 28px; }
+    .repertoire-section h3 { font-size: 20px; }
+    .repertoire-section li { font-size: 16px; }
+}
+
+ 
+/* ======= MODERNISATION DU STYLE GÉNÉRAL ======= */
+body {
+    background-color: #0e0e0e;
+    color: #f5f5f5;
+    font-family: "Poppins", "Montserrat", "Segoe UI", sans-serif;
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+a {
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+a:hover {
+    transform: scale(1.03);
+}
+
+/* Modernisation menu */
+nav {
+    background: linear-gradient(90deg, #111, #222);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav ul li a {
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #ff7b00; /* orange chaud moderne */
+}
+
+/* Modernisation des boutons */
+.btn.orange {
+    background: linear-gradient(45deg, #ff8c00, #ffb347);
+    box-shadow: 0 2px 6px rgba(255, 165, 0, 0.4);
+    border: none;
+}
+
+.btn.orange:hover {
+    background: linear-gradient(45deg, #ffb347, #ff8c00);
+    transform: scale(1.05);
+}
+
+.btn.blue {
+    background: linear-gradient(45deg, #007bff, #00aaff);
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.4);
+    border: none;
+}
+
+.btn.blue:hover {
+    background: linear-gradient(45deg, #00aaff, #007bff);
+    transform: scale(1.05);
+}
+
+/* ======= CARROUSEL PHOTO ======= */
+.carousel-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    margin: 20px 0;
+}
+
+.carousel-container img {
+    height: 300px; /* grand carrousel */
+    cursor: pointer;
+    border-radius: 6px;
+    filter: brightness(0.5) blur(1px); /* toutes les images hors centre sont moins lumineuses */
+    transform: scale(0.85); /* légèrement plus petites */
+    transition: all 0.5s ease;
+}
+
+/* Photo centrale mise en lumière */
+.carousel-container img.active {
+    filter: brightness(1) blur(0);
+    transform: scale(1);
+}
+
+/* Mini-carrousel */
+.carousel-mini {
+    height: 100px; /* hauteur du bandeau mini */
+}
+
+.carousel-mini img {
+    height: 100px;
+    filter: brightness(0.5) blur(1px);
+    transform: scale(0.85);
+}
+
+.carousel-mini img.active {
+    filter: brightness(1) blur(0);
+    transform: scale(1);
+}
+
+
+
+/* ======= FOOTER MODERNE ======= */
+footer {
+    background: linear-gradient(90deg, #111, #222);
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+footer a.email-link {
+    color: #5DA9F5; /* bleu Facebook */
+    font-weight: bold;
+}

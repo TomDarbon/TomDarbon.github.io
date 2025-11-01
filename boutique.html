@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Darbon - Boutique</title>
+
+    <!-- Styles principaux -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome via CDN (fonctionne en local et en ligne) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Lien vers Paypal avec le client ID (AaRuI2...) de l'app "Boutique Tom Darbon Live" créée sur Paypal -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AaRuI2tUH3JO_kLNxvJxUPS_hpznugUQ_4IRCAOjWhL6ipYjE0ZeVrIHxtX8rc6yvvxgZjS7Ft4kStay&currency=EUR" data-sdk-integration-source="button-factory"></script>
+
+</head>
+<body>
+
+<!-- ======= BANNIÈRE ======= -->
+<img src="img/assets_banner.jpg" alt="Bannière Tom Darbon" class="banner">
+
+<!-- ======= MENU ======= -->
+<nav>
+    <div class="menu-container">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="photosvideos.html">Photos/Vidéos</a></li>
+            <li><a href="dates.html">Dates</a></li>
+            <li><a href="repertoire.html">Répertoire</a></li>
+            <li><a href="boutique.html" class="active">Boutique</a></li>
+        </ul>
+        <div class="social-icons">			
+			<a href="https://www.facebook.com/profile.php?id=100064159446245" target="_blank" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+			<a href="https://www.instagram.com/tomdarbon" target="_blank" class="social-icon ig"><i class="fab fa-instagram"></i></a>
+			<a href="https://www.tiktok.com/@tom_darbon21" target="_blank" class="social-icon tt"><i class="fab fa-tiktok"></i></a>
+        </div>
+    </div>
+</nav>
+
+<!-- ======= CONTENU PRINCIPAL ======= -->
+<div class="main-content">
+    <h1>Boutique officielle</h1>
+    <div class="intro">
+        <p>
+		 Retrouvez ici les produits officiels de Tom Darbon.<br>
+         Les paiements sont sécurisés via PayPal et carte bancaire..<br>
+         (Si vous n'avez pas de compte PayPal ou ne souhaitez pas payer via PayPal,<br>	
+         cliquez sur "Carte bancaire".)
+		</p>				
+    </div>
+
+    <!-- ======= PRODUITS ======= -->
+    <div class="products-grid">
+
+        <!-- CD Intact -->
+        <div class="product">
+            <img src="img/TomDarbon_Intact_CD.jpg" alt="Album Intact CD">
+            <h2>Album "Intact" - CD</h2>
+            <p>0,50 euros.<br>
+               Neuf, sous blister.<br>
+               Format digipack, incluant un livret 8 pages tout couleur avec l'intégralité des paroles.<br>
+               Le tarif inclut les frais de livraison.<br>
+               Délai de livraison : 3 à 5 jours ouvrés.</p>
+            <div id="paypal-button-container-cd"></div>
+            <script>
+                paypal.Buttons({
+                    style: { color: 'blue', shape: 'rect', label: 'pay', layout: 'vertical' },
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: { value: '0.50' },
+                                description: 'Album "Intact" - CD'
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            alert('Paiement effectué par ' + details.payer.name.given_name + '. Merci !');
+                        });
+                    }
+                }).render('#paypal-button-container-cd');
+            </script>
+        </div>
+
+        <!-- Vinyle Intact -->
+        <div class="product">
+            <img src="img/TomDarbon_Intact_Vinyle.jpg" alt="Album Intact Vinyle">
+            <h2>Album "Intact" - Vinyle</h2>
+            <p>25 euros.<br>
+               Neuf, sous blister.<br>
+               Vinyle 180g, sous-pochette en carton épais avec l'intégralité des paroles.<br>
+               Le tarif inclut les frais de livraison.<br>
+               Délai de livraison : 3 à 5 jours ouvrés.</p>
+            <div id="paypal-button-container-vinyle"></div>
+            <script>
+                paypal.Buttons({
+                    style: { color: 'blue', shape: 'rect', label: 'pay', layout: 'vertical' },
+                    createOrder: function(data, actions) {
+                        return actions.order.create({
+                            purchase_units: [{
+                                amount: { value: '25.00' },
+                                description: 'Album "Intact" - Vinyle'
+                            }]
+                        });
+                    },
+                    onApprove: function(data, actions) {
+                        return actions.order.capture().then(function(details) {
+                            alert('Paiement effectué par ' + details.payer.name.given_name + '. Merci !');
+                        });
+                    }
+                }).render('#paypal-button-container-vinyle');
+            </script>
+        </div>
+
+		<!-- CD EDD avec Alien Poe -->
+		<div class="product">
+			<img src="img/AlienPoe_EDD.jpg" alt="Album EDD CD">
+			<h2>Album "Les enfants du désordre" - CD (Avec Alien Poe)</h2>
+			<p>12 euros.<br>
+				CD gravé, neuf.<br>
+				Format boitier plastique. Livret incluant l'intégralité des paroles.<br>
+				Illustrations de Jean-Louis Thouard.<br>
+				Le tarif inclut les frais de livraison.<br>
+				Délai de livraison : 3 à 5 jours ouvrés.
+			</p>
+			<div id="paypal-button-container-CD-EDD"></div>
+			<script>
+				paypal.Buttons({
+					style: { color: 'blue', shape: 'rect', label: 'pay', layout: 'vertical' },
+					createOrder: function(data, actions) {
+						return actions.order.create({
+							purchase_units: [{
+								amount: { value: '12.00' },
+								description: 'Album "Les enfants du désordre" - CD'
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							alert('Paiement effectué par ' + details.payer.name.given_name + '. Merci !');
+						});
+					}
+				}).render('#paypal-button-container-CD-EDD');
+			</script>
+		</div>
+
+		<!-- CD WILD -->
+		<div class="product">
+			<img src="img/WILD_IDM_CD.jpg" alt="Album WILD  CD">
+			<h2>Album "I don't Mind" - CD (Avec Wild)</h2>
+			<p>12 euros.<br>
+				Neuf, sous blister.<br>
+				Format boitier plastique. Livret incluant l'intégralité des paroles.<br>
+				Le tarif inclut les frais de livraison.<br>
+				Délai de livraison : 3 à 5 jours ouvrés.
+			</p>
+			<div id="paypal-button-container-CD-WILD-IDM"></div>
+			<script>
+				paypal.Buttons({
+					style: { color: 'blue', shape: 'rect', label: 'pay', layout: 'vertical' },
+					createOrder: function(data, actions) {
+						return actions.order.create({
+							purchase_units: [{
+								amount: { value: '12.00' },
+								description: 'Album "I dont mind" (Avec WILD) - CD'
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							alert('Paiement effectué par ' + details.payer.name.given_name + '. Merci !');
+						});
+					}
+				}).render('#paypal-button-container-CD-WILD-IDM');
+			</script>
+		</div>
+
+
+    </div>
+</div>
+
+<!-- ======= PIED DE PAGE ======= -->
+<footer>
+            <p>Contact : <a href="mailto:tomdarbongm@gmail.com" class="email-link" style="color:#5DA9F5;">tomdarbongm@gmail.com</a></p>
+
+</footer>
+
+<!-- Font Awesome pour icônes sociales -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
