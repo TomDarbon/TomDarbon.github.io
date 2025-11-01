@@ -265,12 +265,15 @@ nav ul li a.active {
 /* ======= RÉPERTOIRE ======= */
 /* Répertoire : fond gris et textes blancs */
 .repertoire-section {
-    background-color: #222; /* gris foncé */
-    padding: 40px 20px;
+    background-color: #222;
+    padding: 40px 60px;
     color: white;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+    left: 100px; /* ajuste ici : essaie 40, 50, ou 60px */
 }
+
 
 /* Titres principaux : COMPOSITIONS / REPRISES */
 .repertoire-section h2 {
