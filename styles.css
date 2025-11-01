@@ -266,13 +266,12 @@ nav ul li a.active {
 /* Répertoire : fond gris et textes blancs */
 .repertoire-section {
     background-color: #222;
-    padding: 40px 20px;
+    padding: 40px 20px; /* plus équilibré */
     color: white;
-    max-width: 900px; /* largeur raisonnable pour la lecture */
-    margin: 0 auto; /* centre horizontalement */
-    text-align: center; /* centre le texte et les titres */
+    max-width: 900px;   /* réduit la largeur pour centrer plus naturellement */
+    margin: 0 auto;
+    text-align: center; /* centre tout le contenu */
 }
-
 
 
 /* Titres principaux : COMPOSITIONS / REPRISES */
@@ -290,17 +289,29 @@ nav ul li a.active {
     color: white;
 }
 
-/* Titres de niveau 3 : titres des chansons */
-.repertoire-section li {
-    font-size: 18px;
-    margin-left: 20px;
-    margin-bottom: 5px;
-}
-
 /* Pour les listes */
 .repertoire-section ul {
-    list-style-position: inside; /* puces à l'intérieur */
-    padding-left: 0; /* on enlève le retrait */
+  list-style: none;           /* enlève les puces par défaut */
+  padding-left: 0;
+  margin-bottom: 15px;
+  text-align: center;         /* centre le texte globalement */
+}
+
+/* Lignes de morceaux (avec puces décalées légèrement à gauche) */
+.repertoire-section li {
+  font-size: 18px;
+  margin-bottom: 5px;
+  position: relative;
+  display: inline-block;      /* permet de centrer chaque ligne */
+  text-align: left;           /* aligne le texte à gauche dans le bloc centré */
+  left: -15px;                /* décale légèrement vers la gauche (ajuste cette valeur selon ton œil) */
+}
+
+/* Petite puce orange */
+.repertoire-section li::before {
+  content: "•";
+  color: #ff9f00;             /* orange */
+  margin-right: 8px;
 }
 
 
