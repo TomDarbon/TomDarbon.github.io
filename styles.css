@@ -266,13 +266,13 @@ nav ul li a.active {
 /* Répertoire : fond gris et textes blancs */
 .repertoire-section {
     background-color: #222;
-    padding: 40px 60px;
+    padding: 40px 20px;
     color: white;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    left: 100px; /* ajuste ici : essaie 40, 50, ou 60px */
+    max-width: 900px; /* largeur raisonnable pour la lecture */
+    margin: 0 auto; /* centre horizontalement */
+    text-align: center; /* centre le texte et les titres */
 }
+
 
 
 /* Titres principaux : COMPOSITIONS / REPRISES */
@@ -299,16 +299,10 @@ nav ul li a.active {
 
 /* Pour les listes */
 .repertoire-section ul {
-    padding-left: 20px;
-    margin-bottom: 15px;
+    list-style-position: inside; /* puces à l'intérieur */
+    padding-left: 0; /* on enlève le retrait */
 }
 
-/* Responsive : taille du texte plus petite sur mobile */
-@media (max-width: 768px) {
-    .repertoire-section h2 { font-size: 28px; }
-    .repertoire-section h3 { font-size: 20px; }
-    .repertoire-section li { font-size: 16px; }
-}
 
 
 
