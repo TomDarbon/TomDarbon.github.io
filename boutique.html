@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Lien vers Paypal avec le client ID (AaRuI2...) de l'app "Boutique Tom Darbon Live" créée sur Paypal -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AaRuI2tUH3JO_kLNxvJxUPS_hpznugUQ_4IRCAOjWhL6ipYjE0ZeVrIHxtX8rc6yvvxgZjS7Ft4kStay&currency=EUR" data-sdk-integration-source="button-factory"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AaRuI2tUH3JO_kLNxvJxUPS_hpznugUQ_4IRCAOjWhL6ipYjE0ZeVrIHxtX8rc6yvvxgZjS7Ft4kStay&currency=EUR" data-sdk-integration-source="button-factory"></script> 
 
 </head>
 <body>
@@ -42,18 +42,21 @@
 <div class="main-content">
     <h1>Boutique officielle</h1>
     <div class="intro">
-        <p>
-		 Retrouvez ici les produits officiels de Tom Darbon.<br>
-         Les paiements sont sécurisés via PayPal et carte bancaire..<br>
-         (Si vous n'avez pas de compte PayPal ou ne souhaitez pas payer via PayPal,<br>	
-         cliquez sur "Carte bancaire".)
-		</p>				
+<p>
+  Retrouvez ici les produits officiels de <strong>Tom Darbon</strong>.<br>
+  Les paiements sont sécurisés via <strong>carte bancaire</strong>.<br>
+  <span style="font-size: 0.9em; font-style: italic;">
+    (Le bouton "carte bancaire" est fourni par Paypal,<br>
+    "Paypal" sera donc simplement mentionné en fin de paiement,<br>
+    n'en tenez pas compte. Vous n'avez pas besoin de compte Paypal.)
+  </span>
+</p>				
     </div>
 
     <!-- ======= PRODUITS ======= -->
     <div class="products-grid">
 
-        <!-- CD Intact -->
+        <!-- ========= CD Intact =======  -->
         <div class="product">
             <img src="img/TomDarbon_Intact_CD.jpg" alt="Album Intact CD">
             <h2>Album "Intact" - CD</h2>
@@ -63,27 +66,43 @@
                Le tarif inclut les frais de livraison.<br>
                Délai de livraison : 3 à 5 jours ouvrés.</p>
             <div id="paypal-button-container-cd"></div>
-            <script>
-                paypal.Buttons({
-                    style: { color: 'blue', shape: 'rect', label: 'pay', layout: 'vertical' },
-                    createOrder: function(data, actions) {
-                        return actions.order.create({
-                            purchase_units: [{
-                                amount: { value: '15.00' },
-                                description: 'Album "Intact" - CD'
-                            }]
-                        });
-                    },
-                    onApprove: function(data, actions) {
-                        return actions.order.capture().then(function(details) {
-                            alert('Paiement effectué par ' + details.payer.name.given_name + '. Merci !');
-                        });
-                    }
-                }).render('#paypal-button-container-cd');
-            </script>
+			<!-- ======================================================= -->
+			<script>
+				paypal.Buttons({
+					style: {
+						layout: 'vertical',
+						color: 'black',  // bouton noir
+						shape: 'rect',
+						label: 'pay',    // texte type "Carte bancaire"
+						tagline: false   // supprime "Optimisé par PayPal"
+					},
+				// ✅ On force le paiement CB uniquement
+					fundingSource: paypal.FUNDING.CARD,
+					createOrder: function(data, actions) {
+						return actions.order.create({
+							purchase_units: [{
+								amount: {
+									value: '15.00' // 💰 remplace par ton prix
+								},
+								description: 'Album "Intact" - CD'
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							alert('Merci ' + details.payer.name.given_name + ' pour votre achat !');
+						});
+					},
+					onError: function(err) {
+						console.error('Erreur PayPal :', err);
+						alert("Une erreur est survenue lors du paiement.");
+					}
+				}).render('#paypal-button-container-cd');
+			</script>
+			<!-- ======================================================= -->
         </div>
 
-        <!-- Vinyle Intact -->
+        <!-- ========= Vinyle  Intact =======  -->       
         <div class="product">
             <img src="img/TomDarbon_Intact_Vinyle.jpg" alt="Album Intact Vinyle">
             <h2>Album "Intact" - Vinyle</h2>
@@ -94,26 +113,41 @@
                Délai de livraison : 3 à 5 jours ouvrés.</p>
             <div id="paypal-button-container-vinyle"></div>
             <script>
-                paypal.Buttons({
-                    style: { color: 'blue', shape: 'rect', label: 'pay', layout: 'vertical' },
-                    createOrder: function(data, actions) {
-                        return actions.order.create({
-                            purchase_units: [{
-                                amount: { value: '25.00' },
-                                description: 'Album "Intact" - Vinyle'
-                            }]
-                        });
-                    },
-                    onApprove: function(data, actions) {
-                        return actions.order.capture().then(function(details) {
-                            alert('Paiement effectué par ' + details.payer.name.given_name + '. Merci !');
-                        });
-                    }
-                }).render('#paypal-button-container-vinyle');
+				paypal.Buttons({
+					style: {
+						layout: 'vertical',
+						color: 'black',  // bouton noir
+						shape: 'rect',
+						label: 'pay',    // texte type "Carte bancaire"
+						tagline: false   // supprime "Optimisé par PayPal"
+					},
+				// ✅ On force le paiement CB uniquement
+					fundingSource: paypal.FUNDING.CARD,
+					createOrder: function(data, actions) {
+						return actions.order.create({
+							purchase_units: [{
+								amount: {
+									value: '25.00' // 💰 remplace par ton prix
+								},
+								description: 'Album "Intact" - Vinyle'
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							alert('Merci ' + details.payer.name.given_name + ' pour votre achat !');
+						});
+					},
+					onError: function(err) {
+						console.error('Erreur PayPal :', err);
+						alert("Une erreur est survenue lors du paiement.");
+					}
+				}).render('#paypal-button-container-vinyle');
             </script>
         </div>
+		
 
-		<!-- CD EDD avec Alien Poe -->
+		<!-- ==========  CD EDD avec Alien Poe  =========== -->
 		<div class="product">
 			<img src="img/AlienPoe_EDD.jpg" alt="Album EDD CD">
 			<h2>Album "Les enfants du désordre" - CD (Avec Alien Poe)</h2>
@@ -127,19 +161,33 @@
 			<div id="paypal-button-container-CD-EDD"></div>
 			<script>
 				paypal.Buttons({
-					style: { color: 'blue', shape: 'rect', label: 'pay', layout: 'vertical' },
+					style: {
+						layout: 'vertical',
+						color: 'black',  // bouton noir
+						shape: 'rect',
+						label: 'pay',    // texte type "Carte bancaire"
+						tagline: false   // supprime "Optimisé par PayPal"
+					},
+				// ✅ On force le paiement CB uniquement
+					fundingSource: paypal.FUNDING.CARD,
 					createOrder: function(data, actions) {
 						return actions.order.create({
 							purchase_units: [{
-								amount: { value: '12.00' },
+								amount: {
+									value: '12.00' // 💰 remplace par ton prix
+								},
 								description: 'Album "Les enfants du désordre" - CD'
 							}]
 						});
 					},
 					onApprove: function(data, actions) {
 						return actions.order.capture().then(function(details) {
-							alert('Paiement effectué par ' + details.payer.name.given_name + '. Merci !');
+							alert('Merci ' + details.payer.name.given_name + ' pour votre achat !');
 						});
+					},
+					onError: function(err) {
+						console.error('Erreur PayPal :', err);
+						alert("Une erreur est survenue lors du paiement.");
 					}
 				}).render('#paypal-button-container-CD-EDD');
 			</script>
@@ -158,25 +206,37 @@
 			<div id="paypal-button-container-CD-WILD-IDM"></div>
 			<script>
 				paypal.Buttons({
-					style: { color: 'blue', shape: 'rect', label: 'pay', layout: 'vertical' },
+					style: {
+						layout: 'vertical',
+						color: 'black',  // bouton noir
+						shape: 'rect',
+						label: 'pay',    // texte type "Carte bancaire"
+						tagline: false   // supprime "Optimisé par PayPal"
+					},
+				// ✅ On force le paiement CB uniquement
+					fundingSource: paypal.FUNDING.CARD,
 					createOrder: function(data, actions) {
 						return actions.order.create({
 							purchase_units: [{
-								amount: { value: '12.00' },
+								amount: {
+									value: '12.00' // 💰 remplace par ton prix
+								},
 								description: 'Album "I dont mind" (Avec WILD) - CD'
 							}]
 						});
 					},
 					onApprove: function(data, actions) {
 						return actions.order.capture().then(function(details) {
-							alert('Paiement effectué par ' + details.payer.name.given_name + '. Merci !');
+							alert('Merci ' + details.payer.name.given_name + ' pour votre achat !');
 						});
+					},
+					onError: function(err) {
+						console.error('Erreur PayPal :', err);
+						alert("Une erreur est survenue lors du paiement.");
 					}
 				}).render('#paypal-button-container-CD-WILD-IDM');
 			</script>
 		</div>
-
-
     </div>
 </div>
 
