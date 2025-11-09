@@ -84,6 +84,13 @@ nav ul li a.active {
 .social-icon.fb { background-color: #1877F2; }
 .social-icon.ig { background-color: #E1306C; }
 .social-icon.tt { background-color: #000000; }
+.social-icon.yt {
+    color: #FF0000; /* rouge YouTube */
+}
+.social-icon.yt:hover {
+    color: #ff6666;
+}
+
 
 .social-icon:hover {
     opacity: 0.8;
