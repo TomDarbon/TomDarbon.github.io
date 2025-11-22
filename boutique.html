@@ -59,29 +59,35 @@
 <div class="main-content">
     <h1>Boutique officielle</h1>
     <div class="intro">
-<p>
-  Retrouvez ici les produits officiels de <strong>Tom Darbon</strong>.<br>
-  Les paiements sont sécurisés via <strong>carte bancaire</strong>.<br>
-  <span style="font-size: 0.9em; font-style: italic;">
-    (Le bouton "carte bancaire" est fourni par Paypal,<br>
-    "Paypal" sera donc simplement mentionné en fin de paiement,<br>
-    n'en tenez pas compte. Vous n'avez pas besoin de compte Paypal.)
-  </span>
-</p>				
+	<p>
+		Retrouvez ici les produits officiels de <strong>Tom Darbon</strong>.<br>
+		Les paiements sont sécurisés via <strong>carte bancaire</strong>.<br>
+		<span style="font-size: 0.9em; font-style: italic;">
+		(Le bouton "carte bancaire" est fourni par Paypal,<br>
+		"Paypal" sera donc simplement mentionné en fin de paiement,<br>
+		n'en tenez pas compte. Vous n'avez pas besoin de compte Paypal.)
+		</span>
+	</p>				
     </div>
 
-    <!-- ======= PRODUITS ======= -->
+	<!-- ======= DISQUES INDIVIDUELS ======= -->
+	<h2> </h2></br>
+	<h2>Les disques individuels</h2>
+				
     <div class="products-grid">
-
+	
         <!-- ========= CD Intact =======  -->
         <div class="product">
             <img src="img/TomDarbon_Intact_CD.jpg" alt="Album Intact CD">
             <h2>Album "Intact" - CD</h2>
-            <p>15 euros.<br>
-               Neuf, sous blister.<br>
-               Format digipack, incluant un livret 8 pages tout couleur avec l'intégralité des paroles.<br>
-               Le tarif inclut les frais de livraison.<br>
-               Délai de livraison : 3 à 5 jours ouvrés.</p>
+			<p>
+				<del>15 euros</del> → <strong>10 euros</strong><br>
+				Neuf, sous blister.<br>
+				Format digipack, incluant un livret 8 pages tout couleur avec l'intégralité des paroles.<br>
+				Le tarif inclut les frais de livraison.<br>
+				Délai de livraison : 3 à 5 jours ouvrés.
+			</p>
+
             <div id="paypal-button-container-cd"></div>
 			<!-- ======================================================= -->
 			<script>
@@ -99,7 +105,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '15.00' // 💰 remplace par ton prix
+									value: '10.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "Intact" - CD'
 							}]
@@ -117,13 +123,14 @@
 				}).render('#paypal-button-container-cd');
 			</script>
 			<!-- ======================================================= -->
-        </div>
+		</div>
 
-        <!-- ========= Vinyle  Intact =======  -->       
+			<!-- ========= Vinyle  Intact =======  -->       
         <div class="product">
             <img src="img/TomDarbon_Intact_Vinyle.jpg" alt="Album Intact Vinyle">
             <h2>Album "Intact" - Vinyle</h2>
-            <p>25 euros.<br>
+            <p>
+			 <del>25 euros</del> → <strong>15 euros</strong><br>
                Neuf, sous blister.<br>
                Vinyle 180g, sous-pochette en carton épais avec l'intégralité des paroles.<br>
                Le tarif inclut les frais de livraison.<br>
@@ -144,7 +151,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '25.00' // 💰 remplace par ton prix
+									value: '15.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "Intact" - Vinyle'
 							}]
@@ -168,8 +175,9 @@
 		<div class="product">
 			<img src="img/AlienPoe_EDD.jpg" alt="Album EDD CD">
 			<h2>Album "Les enfants du désordre" - CD (Avec Alien Poe)</h2>
-			<p>12 euros.<br>
-				CD gravé, neuf.<br>
+			<p>
+				 <del>12 euros</del> → <strong>8 euros</strong><br>
+				 CD gravé, neuf.<br>
 				Format boitier plastique. Livret incluant l'intégralité des paroles.<br>
 				Illustrations de Jean-Louis Thouard.<br>
 				Le tarif inclut les frais de livraison.<br>
@@ -191,7 +199,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '12.00' // 💰 remplace par ton prix
+									value: '8.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "Les enfants du désordre" - CD'
 							}]
@@ -214,8 +222,9 @@
 		<div class="product">
 			<img src="img/WILD_IDM_CD.jpg" alt="Album WILD  CD">
 			<h2>Album "I don't Mind" - CD (Avec Wild)</h2>
-			<p>12 euros.<br>
-				Neuf, sous blister.<br>
+			<p>
+			 <del>12 euros</del> → <strong>8 euros</strong><br>
+			 Neuf, sous blister.<br>
 				Format boitier plastique. Livret incluant l'intégralité des paroles.<br>
 				Le tarif inclut les frais de livraison.<br>
 				Délai de livraison : 3 à 5 jours ouvrés.
@@ -236,7 +245,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '12.00' // 💰 remplace par ton prix
+									value: '8.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "I dont mind" (Avec WILD) - CD'
 							}]
@@ -254,6 +263,148 @@
 				}).render('#paypal-button-container-CD-WILD-IDM');
 			</script>
 		</div>
+	</div>
+
+	<!-- ======= PACKS ======= -->
+	<h2> </h2></br>
+	<h2>Les packs</h2>
+ 				
+    <div class="products-grid">
+	
+
+		<!-- PACK INTACT CD + VINYLE  -->
+		<div class="product">
+			<img src="img/PACK INTACT.jpg" alt="PACK INTACT">
+			<h2>PACK TOM DARBON "INTACT"</h2>
+			<p>
+			 <del>35 euros</del> → <strong>25 euros</strong><br>
+			CD TOM DARBON "Intact"<br>			 
+			+ VINYLE TOM DARBON "Intact"<br>
+			</p>
+			<div id="paypal-button-container-PACK-INTACT"></div>
+			<script>
+				paypal.Buttons({
+					style: {
+						layout: 'vertical',
+						color: 'black',  // bouton noir
+						shape: 'rect',
+						label: 'pay',    // texte type "Carte bancaire"
+						tagline: false   // supprime "Optimisé par PayPal"
+					},
+				// ✅ On force le paiement CB uniquement
+					fundingSource: paypal.FUNDING.CARD,
+					createOrder: function(data, actions) {
+						return actions.order.create({
+							purchase_units: [{
+								amount: {
+									value: '25.00' // 💰 remplace par ton prix
+								},
+								description: 'PACK Tom Darbon "Intact" (CD + VINYLE)'
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							alert('Merci ' + details.payer.name.given_name + ' pour votre achat !');
+						});
+					},
+					onError: function(err) {
+						console.error('Erreur PayPal :', err);
+						alert("Une erreur est survenue lors du paiement.");
+					}
+				}).render('#paypal-button-container-PACK-INTACT');
+			</script>
+		</div>		
+		
+		<!-- PACK WILD + ALIEN POE -->
+		<div class="product">
+			<img src="img/PACK AP_WILD.jpg" alt="PACK AP_WILD">
+			<h2>PACK WILD + ALIEN POE</h2>
+			<p>
+			 <del>20 euros</del> → <strong>15 euros</strong><br>
+			CD WILD "I don't mind"<br>
+			+ CD ALIEN POE "Les enfants du désordre"<br>			 
+			</p>
+			<div id="paypal-button-container-PACK-AP_WILD"></div>
+			<script>
+				paypal.Buttons({
+					style: {
+						layout: 'vertical',
+						color: 'black',  // bouton noir
+						shape: 'rect',
+						label: 'pay',    // texte type "Carte bancaire"
+						tagline: false   // supprime "Optimisé par PayPal"
+					},
+				// ✅ On force le paiement CB uniquement
+					fundingSource: paypal.FUNDING.CARD,
+					createOrder: function(data, actions) {
+						return actions.order.create({
+							purchase_units: [{
+								amount: {
+									value: '15.00' // 💰 remplace par ton prix
+								},
+								description: 'PACK Alien Poe "Les enfants du désordre" (CD) + WILD "I dont mind"(CD)'
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							alert('Merci ' + details.payer.name.given_name + ' pour votre achat !');
+						});
+					},
+					onError: function(err) {
+						console.error('Erreur PayPal :', err);
+						alert("Une erreur est survenue lors du paiement.");
+					}
+				}).render('#paypal-button-container-PACK-AP_WILD');
+			</script>
+		</div>			
+		
+		<!-- PACK LA TOTALE  -->
+		<div class="product">
+			<img src="img/LA TOTALE NOIR.jpg" alt="PACK LA TOTALE">
+			<h2>PACK "LA TOTALE"</h2>
+			<p>
+			 <del>55 euros</del> → <strong>40 euros</strong><br>
+			CD WILD "I don't mind"<br>			 
+			+ CD ALIEN POE "Les enfants du désordre"<br>
+			+ CD TOM DARBON "Intact"<br>
+			+ VINYLE TOM DARBON "Intact"<br>
+			</p>
+			<div id="paypal-button-container-LA-TOTALE"></div>
+			<script>
+				paypal.Buttons({
+					style: {
+						layout: 'vertical',
+						color: 'black',  // bouton noir
+						shape: 'rect',
+						label: 'pay',    // texte type "Carte bancaire"
+						tagline: false   // supprime "Optimisé par PayPal"
+					},
+				// ✅ On force le paiement CB uniquement
+					fundingSource: paypal.FUNDING.CARD,
+					createOrder: function(data, actions) {
+						return actions.order.create({
+							purchase_units: [{
+								amount: {
+									value: '40.00' // 💰 remplace par ton prix
+								},
+								description: 'La TOTALE Tom Darbon "Intact" (CD + VINYLE) + CD WILD + CD ALIEN POE'
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							alert('Merci ' + details.payer.name.given_name + ' pour votre achat !');
+						});
+					},
+					onError: function(err) {
+						console.error('Erreur PayPal :', err);
+						alert("Une erreur est survenue lors du paiement.");
+					}
+				}).render('#paypal-button-container-LA-TOTALE');
+			</script>
+		</div>		
     </div>
 </div>
 
