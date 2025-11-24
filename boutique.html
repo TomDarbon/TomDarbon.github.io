@@ -365,6 +365,51 @@
 				}).render('#paypal-button-container-PACK-AP_WILD');
 			</script>
 		</div>			
+
+		<!-- PACK CD WILD + ALIEN POE + INTACT -->
+		<div class="product">
+			<img src="img/LA TOTALE_CD.jpg" alt="PACK AP_WILD_TD">
+			<h2>PACK WILD + ALIEN POE + "INTACT"</h2>
+			<p>
+               <s>30 euros</s> <span style="font-size:1.2em; color:#c00;"><strong>20 euros</strong></span><br>
+			CD WILD "I don't mind"<br>
+			+ CD ALIEN POE "Les enfants du désordre"<br>			 
+			+ CD TOM DARBON "Intact"<br>			 
+			</p>
+			<div id="paypal-button-container-PACK-AP_WILD_TD"></div>
+			<script>
+				paypal.Buttons({
+					style: {
+						layout: 'vertical',
+						color: 'black',  // bouton noir
+						shape: 'rect',
+						label: 'pay',    // texte type "Carte bancaire"
+						tagline: false   // supprime "Optimisé par PayPal"
+					},
+				// ✅ On force le paiement CB uniquement
+					fundingSource: paypal.FUNDING.CARD,
+					createOrder: function(data, actions) {
+						return actions.order.create({
+							purchase_units: [{
+								amount: {
+									value: '20.00' // 💰 remplace par ton prix
+								},
+								description: 'PACK 3 CD : Alien Poe "Les enfants du désordre" + WILD "I dont mind" + Tom Darbon "Intact"'
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							alert('Merci ' + details.payer.name.given_name + ' pour votre achat !');
+						});
+					},
+					onError: function(err) {
+						console.error('Erreur PayPal :', err);
+						alert("Une erreur est survenue lors du paiement.");
+					}
+				}).render('#paypal-button-container-PACK-AP_WILD_TD');
+			</script>
+		</div>		
 		
 		<!-- PACK LA TOTALE  -->
 		<div class="product">
