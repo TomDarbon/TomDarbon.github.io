@@ -59,41 +59,36 @@
 <div class="main-content">
     <h1>Boutique officielle</h1>
     <div class="intro">
-	<p>
-		Retrouvez ici les produits officiels de <strong>Tom Darbon</strong>.<br>
-		Les paiements sont sécurisés via <strong>carte bancaire</strong>.<br>
-		<span style="font-size: 0.9em; font-style: italic;">
-		(Le bouton "carte bancaire" est fourni par Paypal,<br>
-		"Paypal" sera donc simplement mentionné en fin de paiement,<br>
-		n'en tenez pas compte. Vous n'avez pas besoin de compte Paypal.)
-		</span>
-	</p>				
+<p>
+  Retrouvez ici les produits officiels de <strong>Tom Darbon</strong>.<br>
+  Les paiements sont sécurisés via <strong>carte bancaire</strong>.<br>
+  <span style="font-size: 0.9em; font-style: italic;">
+    (Le bouton "carte bancaire" est fourni par Paypal,<br>
+    "Paypal" sera donc simplement mentionné en fin de paiement,<br>
+    n'en tenez pas compte. Vous n'avez pas besoin de compte Paypal.)
+  </span>
+</p>				
     </div>
-
-<p style="background: red; color: white; font-size: 1.6em; font-weight: bold; padding: 10px; text-align: center;">
-  PROMO SPÉCIALE BLACK FRIDAY JUSQU'AU 30/11 MINUIT
-</p>
 
 
 	<!-- ======= DISQUES INDIVIDUELS ======= -->
 	<h2> </h2></br>
 	<h2>Les disques individuels</h2>
-				
+	
+    <!-- ======= PRODUITS ======= -->
     <div class="products-grid">
 	
+
         <!-- ========= CD Intact =======  -->
         <div class="product">
             <img src="img/TomDarbon_Intact_CD.jpg" alt="Album Intact CD">
             <h2>Album "Intact" - CD</h2>
-			<p>
-				<!-- <del>15 euros</del> → <strong>10 euros</strong><br>  -->
-               <s>15 euros</s> <span style="font-size:1.2em; color:#c00;"><strong>10 euros</strong></span><br>
-				Neuf, sous blister.<br>
-				Format digipack, incluant un livret 8 pages tout couleur avec l'intégralité des paroles.<br>
-				Le tarif inclut les frais de livraison.<br>
-				Délai de livraison : 3 à 5 jours ouvrés.
-			</p>
-
+            <p>
+			<b>15 euros</b><br>
+               Neuf, sous blister.<br>
+               Format digipack, incluant un livret 8 pages tout couleur avec l'intégralité des paroles.<br>
+               <b>Le tarif inclut les frais de livraison.</b><br>
+               Délai de livraison : 3 à 5 jours ouvrés.</p>
             <div id="paypal-button-container-cd"></div>
 			<!-- ======================================================= -->
 			<script>
@@ -111,7 +106,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '10.00' // 💰 remplace par ton prix
+									value: '15.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "Intact" - CD'
 							}]
@@ -129,17 +124,17 @@
 				}).render('#paypal-button-container-cd');
 			</script>
 			<!-- ======================================================= -->
-		</div>
+        </div>
 
-			<!-- ========= Vinyle  Intact =======  -->       
+        <!-- ========= Vinyle  Intact =======  -->       
         <div class="product">
             <img src="img/TomDarbon_Intact_Vinyle.jpg" alt="Album Intact Vinyle">
             <h2>Album "Intact" - Vinyle</h2>
             <p>
-			 <s>25 euros</s> <span style="font-size:1.2em; color:#c00;"><strong>15 euros</strong></span><br>
+			<b>25 euros</b><br>
                Neuf, sous blister.<br>
                Vinyle 180g, sous-pochette en carton épais avec l'intégralité des paroles.<br>
-               Le tarif inclut les frais de livraison.<br>
+               <b>Le tarif inclut les frais de livraison.</b><br>
                Délai de livraison : 3 à 5 jours ouvrés.</p>
             <div id="paypal-button-container-vinyle"></div>
             <script>
@@ -157,7 +152,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '15.00' // 💰 remplace par ton prix
+									value: '25.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "Intact" - Vinyle'
 							}]
@@ -182,11 +177,11 @@
 			<img src="img/AlienPoe_EDD.jpg" alt="Album EDD CD">
 			<h2>Album "Les enfants du désordre" - CD (Avec Alien Poe)</h2>
 			<p>
-               <s>12 euros</s> <span style="font-size:1.2em; color:#c00;"><strong>8 euros</strong></span><br>
-				 CD gravé, neuf.<br>
+			<b>12 euros</b><br>
+				CD gravé, neuf.<br>
 				Format boitier plastique. Livret incluant l'intégralité des paroles.<br>
 				Illustrations de Jean-Louis Thouard.<br>
-				Le tarif inclut les frais de livraison.<br>
+				<b>Le tarif inclut les frais de livraison.</b><br>
 				Délai de livraison : 3 à 5 jours ouvrés.
 			</p>
 			<div id="paypal-button-container-CD-EDD"></div>
@@ -205,7 +200,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '8.00' // 💰 remplace par ton prix
+									value: '12.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "Les enfants du désordre" - CD'
 							}]
@@ -228,11 +223,10 @@
 		<div class="product">
 			<img src="img/WILD_IDM_CD.jpg" alt="Album WILD  CD">
 			<h2>Album "I don't Mind" - CD (Avec Wild)</h2>
-			<p>
-               <s>12 euros</s> <span style="font-size:1.2em; color:#c00;"><strong>8 euros</strong></span><br>
-			 Neuf, sous blister.<br>
+			<p><b>12 euros.</b><br>
+				Neuf, sous blister.<br>
 				Format boitier plastique. Livret incluant l'intégralité des paroles.<br>
-				Le tarif inclut les frais de livraison.<br>
+				<b>Le tarif inclut les frais de livraison.</b><br>
 				Délai de livraison : 3 à 5 jours ouvrés.
 			</p>
 			<div id="paypal-button-container-CD-WILD-IDM"></div>
@@ -251,7 +245,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '8.00' // 💰 remplace par ton prix
+									value: '12.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "I dont mind" (Avec WILD) - CD'
 							}]
@@ -269,8 +263,8 @@
 				}).render('#paypal-button-container-CD-WILD-IDM');
 			</script>
 		</div>
-	</div>
-
+    </div>
+	
 	<!-- ======= PACKS ======= -->
 	<h2> </h2></br>
 	<h2>Les packs</h2>
@@ -283,9 +277,11 @@
 			<img src="img/PACK INTACT.jpg" alt="PACK INTACT">
 			<h2>PACK TOM DARBON "INTACT"</h2>
 			<p>
-               <s>35 euros</s> <span style="font-size:1.2em; color:#c00;"><strong>25 euros</strong></span><br>
+            <b>35 euros</b><br>
 			CD TOM DARBON "Intact"<br>			 
 			+ VINYLE TOM DARBON "Intact"<br>
+			<b>Le tarif inclut les frais de livraison.</b><br>
+				Délai de livraison : 3 à 5 jours ouvrés.
 			</p>
 			<div id="paypal-button-container-PACK-INTACT"></div>
 			<script>
@@ -327,9 +323,11 @@
 			<img src="img/PACK AP_WILD.jpg" alt="PACK AP_WILD">
 			<h2>PACK WILD + ALIEN POE</h2>
 			<p>
-               <s>20 euros</s> <span style="font-size:1.2em; color:#c00;"><strong>15 euros</strong></span><br>
+            <b>20 euros</b><br>
 			CD WILD "I don't mind"<br>
-			+ CD ALIEN POE "Les enfants du désordre"<br>			 
+			+ CD ALIEN POE "Les enfants du désordre"<br>
+			<b>Le tarif inclut les frais de livraison.</b><br>
+				Délai de livraison : 3 à 5 jours ouvrés.			
 			</p>
 			<div id="paypal-button-container-PACK-AP_WILD"></div>
 			<script>
@@ -371,10 +369,12 @@
 			<img src="img/LA TOTALE_CD.jpg" alt="PACK AP_WILD_TD">
 			<h2>PACK WILD + ALIEN POE + "INTACT"</h2>
 			<p>
-               <s>30 euros</s> <span style="font-size:1.2em; color:#c00;"><strong>20 euros</strong></span><br>
+            <b>30 euros</b><br>
 			CD WILD "I don't mind"<br>
 			+ CD ALIEN POE "Les enfants du désordre"<br>			 
-			+ CD TOM DARBON "Intact"<br>			 
+			+ CD TOM DARBON "Intact"<br>	
+			<b>Le tarif inclut les frais de livraison.</b><br>
+			Délai de livraison : 3 à 5 jours ouvrés.			
 			</p>
 			<div id="paypal-button-container-PACK-AP_WILD_TD"></div>
 			<script>
@@ -416,11 +416,13 @@
 			<img src="img/LA TOTALE NOIR.jpg" alt="PACK LA TOTALE">
 			<h2>PACK "LA TOTALE"</h2>
 			<p>
-               <s>55 euros</s> <span style="font-size:1.2em; color:#c00;"><strong>40 euros</strong></span><br>
+            <b>55 euros</b><br>
 			CD WILD "I don't mind"<br>			 
 			+ CD ALIEN POE "Les enfants du désordre"<br>
 			+ CD TOM DARBON "Intact"<br>
 			+ VINYLE TOM DARBON "Intact"<br>
+			<b>Le tarif inclut les frais de livraison.</b><br>
+			Délai de livraison : 3 à 5 jours ouvrés.
 			</p>
 			<div id="paypal-button-container-LA-TOTALE"></div>
 			<script>
@@ -457,6 +459,8 @@
 			</script>
 		</div>		
     </div>
+	
+	
 </div>
 
 <!-- ======= PIED DE PAGE ======= -->
