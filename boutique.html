@@ -78,7 +78,56 @@
 	
     <!-- ======= PRODUITS ======= -->
     <div class="products-grid">
-	
+
+
+        <!-- ========= CD Coeur Battant =======  -->
+        <div class="product">
+            <img src="img/Tom-Digi-Recto.jpg" alt="Album Coeur Battant CD">
+            <h2>Album "Coeur battant" - PRECOMMANDE CD</h2>
+            <p>
+			<b>12 euros</b><br>
+               Neuf, sous blister.<br>
+               Format digipack, incluant un livret 8 pages tout couleur avec l'intégralité des paroles.<br>
+               <b>Frais de livraison offerts pendant la période de précommande !</b><br>
+               Délai de livraison : d'ici le 31/07 environ</p>
+            <div id="paypal-button-container-cd-coeur"></div>
+			<!-- ======================================================= -->
+			<script>
+				paypal.Buttons({
+					style: {
+						layout: 'vertical',
+						color: 'black',  // bouton noir
+						shape: 'rect',
+						label: 'pay',    // texte type "Carte bancaire"
+						tagline: false   // supprime "Optimisé par PayPal"
+					},
+				// ✅ On force le paiement CB uniquement
+					fundingSource: paypal.FUNDING.CARD,
+					createOrder: function(data, actions) {
+						return actions.order.create({
+							purchase_units: [{
+								amount: {
+									value: '12.00' // 💰 remplace par ton prix
+								},
+								description: 'Album "Coeur battant" - CD'
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							alert('Merci ' + details.payer.name.given_name + ' pour votre achat !');
+						});
+					},
+					onError: function(err) {
+						console.error('Erreur PayPal :', err);
+						alert("Une erreur est survenue lors du paiement.");
+					}
+				}).render('#paypal-button-container-cd-coeur');
+			</script>
+			<!-- ======================================================= -->
+        </div>	
+
+
 
         <!-- ========= CD Intact =======  -->
         <div class="product">
@@ -90,7 +139,7 @@
                Format digipack, incluant un livret 8 pages tout couleur avec l'intégralité des paroles.<br>
                <b>Le tarif inclut les frais de livraison.</b><br>
                Délai de livraison : 3 à 5 jours ouvrés.</p>
-            <div id="paypal-button-container-cd"></div>
+            <div id="paypal-button-container-cd-intact"></div>
 			<!-- ======================================================= -->
 			<script>
 				paypal.Buttons({
@@ -122,7 +171,7 @@
 						console.error('Erreur PayPal :', err);
 						alert("Une erreur est survenue lors du paiement.");
 					}
-				}).render('#paypal-button-container-cd');
+				}).render('#paypal-button-container-cd-intact');
 			</script>
 			<!-- ======================================================= -->
         </div>
@@ -137,7 +186,7 @@
                Vinyle 180g, sous-pochette en carton épais avec l'intégralité des paroles.<br>
                <b>Le tarif inclut les frais de livraison.</b><br>
                Délai de livraison : 3 à 5 jours ouvrés.</p>
-            <div id="paypal-button-container-vinyle"></div>
+            <div id="paypal-button-container-vinyle-intact"></div>
             <script>
 				paypal.Buttons({
 					style: {
@@ -168,7 +217,7 @@
 						console.error('Erreur PayPal :', err);
 						alert("Une erreur est survenue lors du paiement.");
 					}
-				}).render('#paypal-button-container-vinyle');
+				}).render('#paypal-button-container-vinyle-intact');
             </script>
         </div>
 		
