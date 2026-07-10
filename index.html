@@ -139,8 +139,56 @@
 </script>
 
 
+<div class="video-card">
+    <h3>Interview sur IciBourgogne + France 3 du 10/12/2025</h3>
 
+    <div class="video-container">
+        <iframe 
+            id="yt-short-N4yTnp0Cg5w"
+            src="https://www.youtube.com/embed/Zgtmhzx79Fk"
+            title="Super-Teaser 7 titres du prochain album"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
 
+        <!-- Fallback si l’embed est bloqué -->
+        <div class="yt-fallback" style="display:none; text-align:center; padding:30px;">
+            <p>🎬 Cette vidéo est un YouTube Short</p>
+            <a href="https://youtube.com/shorts/Zgtmhzx79Fk"
+               target="_blank"
+               style="
+                    display:inline-block;
+                    margin-top:10px;
+                    padding:12px 20px;
+                    background:#e62117;
+                    color:#fff;
+                    text-decoration:none;
+                    border-radius:6px;
+                    font-weight:bold;">
+                ▶️ Voir le Short sur YouTube
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+    setTimeout(() => {
+        const iframe = document.getElementById("yt-short-Zgtmhzx79Fk");
+        const fallback = iframe.nextElementSibling;
+
+        try {
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            if (!iframeDoc || iframeDoc.body.innerHTML.trim() === "") {
+                iframe.style.display = "none";
+                fallback.style.display = "block";
+            }
+        } catch (e) {
+            iframe.style.display = "none";
+            fallback.style.display = "block";
+        }
+    }, 1500);
+</script>
 
 
 
