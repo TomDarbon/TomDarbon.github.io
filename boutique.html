@@ -320,7 +320,53 @@
 	<h2>Les packs</h2>
  				
     <div class="products-grid">
-	
+
+		<!-- PACK INTACT CD + COEUR BATTANT CD   -->
+		<div class="product">
+			<img src="img/ChatGPT PACK CD CB_INTACT.png" alt="PACK CB_INTACT">
+			<h2>PACK TOM DARBON "COEUR BATTANT" + "INTACT"</h2>
+			<p>
+            <b>22 euros</b><br>
+			CD TOM DARBON "Coeur battant"<br>			 
+			+ CD TOM DARBON "Intact"<br>
+			<b>Le tarif inclut les frais de livraison.</b><br>
+			<b>Livraison à partir de début août 2026</b><br>
+				Délai de livraison : 3 à 5 jours ouvrés.
+			</p>
+			<div id="paypal-button-container-PACK-CB-INTACT"></div>
+			<script>
+				paypal.Buttons({
+					style: {
+						layout: 'vertical',
+						color: 'black',  // bouton noir
+						shape: 'rect',
+						label: 'pay',    // texte type "Carte bancaire"
+						tagline: false   // supprime "Optimisé par PayPal"
+					},
+				// ✅ On force le paiement CB uniquement
+					fundingSource: paypal.FUNDING.CARD,
+					createOrder: function(data, actions) {
+						return actions.order.create({
+							purchase_units: [{
+								amount: {
+									value: '22.00' // 💰 remplace par ton prix
+								},
+								description: 'PACK CD Tom Darbon "Coeur battant" + "Intact"'
+							}]
+						});
+					},
+					onApprove: function(data, actions) {
+						return actions.order.capture().then(function(details) {
+							alert('Merci ' + details.payer.name.given_name + ' pour votre achat !');
+						});
+					},
+					onError: function(err) {
+						console.error('Erreur PayPal :', err);
+						alert("Une erreur est survenue lors du paiement.");
+					}
+				}).render('#paypal-button-container-PACK-CB-INTACT');
+			</script>
+		</div>		
 
 		<!-- PACK INTACT CD + VINYLE  -->
 		<div class="product">
