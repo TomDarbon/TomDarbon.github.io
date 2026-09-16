@@ -18,7 +18,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Darbon - Accueil</title>
+    <title>Tom Darbon - Photos & Vidéos</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -60,8 +60,8 @@
 				<ul class="menu-left">
 					<li><a href="index.html">Accueil & Vidéos</a></li>
 					<li><a href="bio.html">Bio/carrière</a></li>
-					<li><a href="presse.html">Presse</a></li>
-					<li><a href="soundcloud.html"  class="active">Soundcloud</a></li>
+					<li><a href="presse.html" class="active">Photos</a></li>
+					<li><a href="soundcloud.html">Soundcloud</a></li>
 					<li><a href="dates.html">Dates</a></li>
 					<li><a href="repertoire.html">Répertoire Live</a></li>
 					<li><a href="boutique.html">Boutique</a></li>
@@ -72,33 +72,32 @@
 					<a href="https://www.instagram.com/tomdarbon" target="_blank" class="social-icon ig"><i class="fab fa-instagram"></i></a>
 					<a href="https://www.tiktok.com/@tom_darbon21" target="_blank" class="social-icon tt"><i class="fab fa-tiktok"></i></a>
 					<a href="https://www.youtube.com/@TomDarbonOfficiel" target="_blank" class="social-icon yt"><i class="fab fa-youtube"></i></a>
-
 				</div>
 			</div>
 		</nav>
-
     </header>
 
-	<main class="main-content home-content">
-		<section class="intro">
-			<div class="intro-content">
-				<h1>Tom Darbon</h1>
-				<h2>Tous les titres, ou presque, à écouter ici :</h2>
+    <main>
+	
+			<!-- ======= PRESSE ======= -->
+		<section style="max-width:1200px; margin:30px auto 45px auto; padding:0 15px; text-align:center;">
 
-				<p>
-					<a href="https://soundcloud.com/tom-darbon"
-					   target="_blank"
-					   rel="noopener noreferrer"
-					   style="color: #4DA6FF;">
-						🎵 Écouter mes titres sur SoundCloud
-					</a>
-				</p>
-			</div>
+			<h2 style="margin-bottom:8px;">
+				Presse
+			</h2>
+
+			<p style="margin-top:0; margin-bottom:20px;">
+				Le Progrès — 15 septembre 2026
+			</p>
+
+			<img src="img_photos/Art_LeProgres_15-09-2026.jpg"
+				 alt="Article du Progrès du 15 septembre 2026 consacré à Tom Darbon et à l'album Cœur Battant"
+				 style="width:100%; height:auto; display:block; margin:0 auto;">
+				 
 		</section>
-	</main>
-		
-		<!-- Mini carrousel d'accueil -->
-		<div class="carousel-container carousel-mini">
+	
+ 		<!-- Carrousel taille normale (pas mini) -->
+		<div class="carousel-container carousel-container">
 				<img src="img_photos/01_Tom_Pop2Pop_au bar à vin.jpg" alt="Photo 1">
 				<img src="img_photos/02_Tom_Pop2Pop_chez_Benj.jpg" alt="Photo 2">
 				<img src="img_photos/03_Tom_Pub1.jpg" alt="Photo 3">
@@ -118,11 +117,9 @@
 				<img src="img_photos/09_TOM DARBON_Presse_3.jpg" alt="Photo 9 bis">
 		</div>
     <script src="carousel.js"></script>
-
         <footer>
             <p>Contact : <a href="mailto:tomdarbongm@gmail.com" class="email-link" style="color:#5DA9F5;">tomdarbongm@gmail.com</a></p>
         </footer>
     </main>
-
 </body>
 </html>

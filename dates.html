@@ -1,109 +1,680 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Darbon - Accueil</title>
+
+    <title>Tom Darbon - Dates</title>
+
+    <!-- CSS général du site -->
     <link rel="stylesheet" href="styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQXT31W9RH"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RQXT31W9RH');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RQXT31W9RH');
     </script>
+
+
+    <!-- =====================================================
+         STYLE SPÉCIFIQUE À LA PAGE DATES
+         ===================================================== -->
+
+    <style>
+
+        .dates-page {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 45px 25px 60px 25px;
+        }
+
+
+        /* ===== TITRES ===== */
+
+        .dates-page h1 {
+            text-align: center;
+            font-size: 2em;
+            margin: 15px 0 35px 0;
+            letter-spacing: 1px;
+        }
+
+
+        /* ===== DATES À VENIR ===== */
+
+        .event-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+
+        .event-card {
+            display: flex;
+            align-items: stretch;
+
+            background: #272727;
+            border: 1px solid #454545;
+            border-radius: 6px;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.2s ease,
+                background 0.2s ease;
+        }
+
+
+        .event-card:hover {
+            transform: translateY(-2px);
+            background: #2d2d2d;
+        }
+
+
+        /* Bloc date à gauche */
+
+        .event-date {
+            width: 120px;
+            min-width: 120px;
+
+            background: #181818;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            padding: 15px 5px;
+        }
+
+
+        .event-day {
+            font-size: 2.7em;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+
+        .event-month {
+            font-size: 1em;
+            font-weight: bold;
+            margin-top: 6px;
+        }
+
+
+        .event-year {
+            font-size: 0.8em;
+            color: #aaa;
+            margin-top: 3px;
+        }
+
+
+        /* Informations de l'événement */
+
+        .event-info {
+            padding: 17px 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .event-info h2 {
+            margin: 0 0 8px 0;
+            font-size: 1.25em;
+        }
+
+
+        .event-info p {
+            margin: 3px 0;
+            line-height: 1.45;
+        }
+
+
+        /* Date principale mise en avant */
+
+        .event-card.highlight {
+            border-left: 5px solid #B3002D;
+        }
+
+
+        .event-card.highlight .event-info h2 {
+            color: #fff;
+        }
+
+
+        .free-entry {
+            color: #ddd;
+            font-weight: bold;
+            margin-top: 6px !important;
+        }
+
+
+
+        /* =====================================================
+           DATES PASSÉES
+           ===================================================== */
+
+        .past-dates {
+            margin-top: 70px;
+        }
+
+
+        .past-dates h1 {
+            margin-bottom: 25px;
+        }
+
+
+        .past-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92em;
+        }
+
+
+        .past-table td {
+            padding: 11px 10px;
+            border-bottom: 1px solid #444;
+            vertical-align: top;
+        }
+
+
+        .past-table td:first-child {
+            width: 140px;
+            color: #bbb;
+            white-space: nowrap;
+        }
+
+
+        .past-table td:last-child {
+            width: 110px;
+            color: #bbb;
+        }
+
+
+        .past-table tr:hover {
+            background: #292929;
+        }
+
+
+
+        /* =====================================================
+           SMARTPHONE
+           ===================================================== */
+
+        @media (max-width: 650px) {
+
+            .dates-page {
+                padding: 30px 12px 45px 12px;
+            }
+
+
+            .dates-page h1 {
+                font-size: 1.6em;
+                margin-bottom: 25px;
+            }
+
+
+            .event-date {
+                width: 82px;
+                min-width: 82px;
+                padding: 12px 4px;
+            }
+
+
+            .event-day {
+                font-size: 2em;
+            }
+
+
+            .event-month {
+                font-size: 0.85em;
+            }
+
+
+            .event-info {
+                padding: 13px 14px;
+            }
+
+
+            .event-info h2 {
+                font-size: 1.05em;
+            }
+
+
+            .event-info p {
+                font-size: 0.9em;
+            }
+
+
+            .past-table td {
+                padding: 8px 5px;
+                font-size: 0.85em;
+            }
+
+
+            .past-table td:first-child {
+                width: 90px;
+                white-space: normal;
+            }
+
+
+            .past-table td:last-child {
+                display: none;
+            }
+
+        }
+
+    </style>
+
 </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Darbon - Dates</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
+
 
 <body class="dark-theme">
 
-<!-- Bloc temporaire précommande -->
-<!-- ======= PRECOMMANDE ALBUM (BLOC TEMPORAIRE SANS CSS) ======= -->
+
+<!-- =====================================================
+     BLOC TEMPORAIRE PRÉCOMMANDE
+     ===================================================== -->
+
 <div style="background:#111; color:#fff; padding:20px; border-bottom:1px solid #333; font-family:Arial, sans-serif;">
-    
+
     <div style="display:flex; align-items:center; gap:20px; max-width:900px; margin:0 auto;">
-        
-        <img src="img/Tom-Digi-Recto.jpg" alt="Album Coeur Battant" 
+
+        <img src="img/Tom-Digi-Recto.jpg"
+             alt="Album Coeur Battant"
              style="width:160px; border-radius:4px;">
-        
+
         <div>
-            <h2 style="margin:0 0 10px 0; font-size:1.4em;color:#B3002D;">
-			   Nouvel album : "Coeur Battant"<br>
-			   Sortie officielle 19/09
-			   </h2>
-            
+
+            <h2 style="margin:0 0 10px 0; font-size:1.4em; color:#B3002D;">
+                Nouvel album : "Coeur Battant"<br>
+                Sortie officielle 19/09
+            </h2>
+
             <p style="margin:0 0 15px 0; line-height:1.4;">
-                Précommande ouverte — CD digipack, livret 8 pages couleur, paroles incluses.<br>
+
+                Précommande ouverte — CD digipack, livret 8 pages couleur,
+                paroles incluses.<br>
+
                 Livraison sous 3j ouvrés.<br>
-                <strong><span style="color:#B3002D;">Frais de port offerts pendant la précommande !</span></strong>
-				<br>Rendez-vous dans l’onglet 
-					<a href="boutique.html" style="color:#5DA9F5; text-decoration:none;">Boutique</a>
-					pour le commander.
+
+                <strong>
+                    <span style="color:#B3002D;">
+                        Frais de port offerts pendant la précommande !
+                    </span>
+                </strong>
+
+                <br>
+
+                Rendez-vous dans l’onglet
+                <a href="boutique.html"
+                   style="color:#5DA9F5; text-decoration:none;">
+                    Boutique
+                </a>
+                pour le commander.
+
             </p>
 
             <div id="paypal-button-container-precommande"></div>
+
         </div>
+
     </div>
+
 </div>
 
-    <header>
-        <img src="img/assets_banner.jpg" alt="Bannière Tom Darbon" class="banner">
-		<nav>
-			<div class="menu-container">
-				<ul class="menu-left">
-					<li><a href="index.html">Accueil & Vidéos</a></li>
-					<li><a href="bio.html">Bio/carrière</a></li>
-					<li><a href="photos_videos.html">Photos</a></li>
-					<li><a href="soundcloud.html">Soundcloud</a></li>
-					<li><a href="dates.html" class="active">Dates</a></li>
-					<li><a href="repertoire.html">Répertoire Live</a></li>
-					<li><a href="boutique.html">Boutique</a></li>
-				</ul>
 
-				<div class="social-icons">
-					<a href="https://www.facebook.com/profile.php?id=100064159446245" target="_blank" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
-					<a href="https://www.instagram.com/tomdarbon" target="_blank" class="social-icon ig"><i class="fab fa-instagram"></i></a>
-					<a href="https://www.tiktok.com/@tom_darbon21" target="_blank" class="social-icon tt"><i class="fab fa-tiktok"></i></a>
-					<a href="https://www.youtube.com/@TomDarbonOfficiel" target="_blank" class="social-icon yt"><i class="fab fa-youtube"></i></a>
-				</div>
-			</div>
-		</nav>
-    </header>
 
-    <main>
-        <section class="dates-section">
-            <h1>Dates à venir</h1>
-            <table class="dates-table">
-                <tr><th>Date</th><th>Lieu ou Evenement</th><th>Ville ou support</th></tr>
-                <tr><td>SAM. 19/09/2026</td><td>Sortie en CD du nouvel album, "Coeur Battant"</td><td>Précommandes ici sur la boutique !</td></tr>
-                <tr><td>SAM. 19/09/2026 16h30</td><td>Concert Show-Case & dédicaces CD à la FNAC de Dole (39)</td><td>Dole (39)</td></tr>
-                <tr><td>SAM. 26/09/2026 19h30</td><td>Concert au Café Charles, canal des tanneurs, lors du WE du chat perché de DOLE</td><td>Dole (39)</td></tr>
-                <tr><td>SAM. 28/11/2026 20h00</td><td>Concert avec Dollmen et CYCLOPE - salle des fêtes d'Authume</td><td>Authume (39)</td></tr>
-            </table>
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header>
+
+    <img src="img/assets_banner.jpg"
+         alt="Bannière Tom Darbon"
+         class="banner">
+
+
+    <nav>
+
+        <div class="menu-container">
+
+            <ul class="menu-left">
+
+                <li>
+                    <a href="index.html">
+                        Accueil & Vidéos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="bio.html">
+                        Bio/carrière
+                    </a>
+                </li>
+
+                <li>
+                    <a href="presse.html">
+                        Presse
+                    </a>
+                </li>
+
+                <li>
+                    <a href="soundcloud.html">
+                        Soundcloud
+                    </a>
+                </li>
+
+                <li>
+                    <a href="dates.html" class="active">
+                        Dates
+                    </a>
+                </li>
+
+                <li>
+                    <a href="repertoire.html">
+                        Répertoire Live
+                    </a>
+                </li>
+
+                <li>
+                    <a href="boutique.html">
+                        Boutique
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div class="social-icons">
+
+                <a href="https://www.facebook.com/profile.php?id=100064159446245"
+                   target="_blank"
+                   class="social-icon fb">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/tomdarbon"
+                   target="_blank"
+                   class="social-icon ig">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://www.tiktok.com/@tom_darbon21"
+                   target="_blank"
+                   class="social-icon tt">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@TomDarbonOfficiel"
+                   target="_blank"
+                   class="social-icon yt">
+                    <i class="fab fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     CONTENU
+     ===================================================== -->
+
+<main>
+
+    <div class="dates-page">
+
+
+        <!-- =============================================
+             DATES À VENIR
+             ============================================= -->
+
+        <section>
+
+            <h1>DATES À VENIR</h1>
+
+
+            <div class="event-list">
+
+
+                <!-- SORTIE ALBUM -->
+
+                <div class="event-card">
+
+                    <div class="event-date">
+
+                        <span class="event-day">19</span>
+                        <span class="event-month">SEPT.</span>
+                        <span class="event-year">2026</span>
+
+                    </div>
+
+
+                    <div class="event-info">
+
+                        <h2>Sortie de l'album « Cœur Battant »</h2>
+
+                        <p>
+                            💿 Sortie officielle du nouvel album en CD
+                        </p>
+
+                        <p>
+                            <strong>Disponible sur la boutique</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- SHOWCASE FNAC -->
+
+                <div class="event-card highlight">
+
+                    <div class="event-date">
+
+                        <span class="event-day">19</span>
+                        <span class="event-month">SEPT.</span>
+                        <span class="event-year">2026</span>
+
+                    </div>
+
+
+                    <div class="event-info">
+
+                        <h2>Showcase & dédicaces — FNAC Dole</h2>
+
+                        <p>
+                            🎸 Concert showcase de lancement de « Cœur Battant »
+                        </p>
+
+                        <p>
+                            📍 Dole (39) — 🕓 16h30
+                        </p>
+
+                        <p class="free-entry">
+                            Entrée gratuite
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CAFÉ CHARLES -->
+
+                <div class="event-card">
+
+                    <div class="event-date">
+
+                        <span class="event-day">26</span>
+                        <span class="event-month">SEPT.</span>
+                        <span class="event-year">2026</span>
+
+                    </div>
+
+
+                    <div class="event-info">
+
+                        <h2>Concert au Café Charles</h2>
+
+                        <p>
+                            🎸 Week-end du Chat Perché
+                        </p>
+
+                        <p>
+                            📍 Canal des Tanneurs — Dole (39) — 🕢 19h30
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- AUTHUME -->
+
+                <div class="event-card">
+
+                    <div class="event-date">
+
+                        <span class="event-day">28</span>
+                        <span class="event-month">NOV.</span>
+                        <span class="event-year">2026</span>
+
+                    </div>
+
+
+                    <div class="event-info">
+
+                        <h2>Concert avec Dollmen et CYCLOPE</h2>
+
+                        <p>
+                            🎸 Salle des fêtes d'Authume
+                        </p>
+
+                        <p>
+                            📍 Authume (39) — 🕗 20h00
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
         </section>
-		
-        <section class="dates-section">
-            <h1>Anciennes dates</h1>
-            <table class="dates-table">
-                <tr><td>MAR. 1/09/2026</td><td>Sortie sur YouTube du clip "Métamorphose", 1er single de "Coeur Battant"</td><td>YouTube</td></tr>
-                <tr><td>LUN. 31/08/2026</td><td>Interview de Tom sur la radio Fréquence Plus ! (en écoute sur l'onglet Accueil & Vidéos)</td><td>YouTube</td></tr>
-                <tr><td>SAM. 20/06/2026</td><td>Concert au café LE PARISIEN</td><td>Dole (39)</td></tr>
-                <tr><td>10/12/2025</td><td>Interview de Tom en simultané sur la radio Ici Bourgogne (103.7) et sur France 3 ! (visionnable sur l'onglet Accueil & Vidéos)</td><td>Dijon (21)</td></tr>
-				<tr><td>Mai 2025</td><td>Sortie du single "Demain"</td><td>Plateformes</td></tr>
+
+
+
+        <!-- =============================================
+             DATES PASSÉES
+             ============================================= -->
+
+        <section class="past-dates">
+
+            <h1>DATES PASSÉES</h1>
+
+
+            <table class="past-table">
+
+                <tr>
+                    <td>MAR. 1/09/2026</td>
+                    <td>
+                        Sortie sur YouTube du clip « Métamorphose »,
+                        1er single de « Cœur Battant »
+                    </td>
+                    <td>YouTube</td>
+                </tr>
+
+
+                <tr>
+                    <td>LUN. 31/08/2026</td>
+                    <td>
+                        Interview de Tom sur la radio Fréquence Plus !
+                        (en écoute sur l'onglet Accueil & Vidéos)
+                    </td>
+                    <td>YouTube</td>
+                </tr>
+
+
+                <tr>
+                    <td>SAM. 20/06/2026</td>
+                    <td>
+                        Concert au café LE PARISIEN
+                    </td>
+                    <td>Dole (39)</td>
+                </tr>
+
+
+                <tr>
+                    <td>10/12/2025</td>
+                    <td>
+                        Interview de Tom en simultané sur la radio
+                        Ici Bourgogne (103.7) et sur France 3 !
+                        (visionnable sur l'onglet Accueil & Vidéos)
+                    </td>
+                    <td>Dijon (21)</td>
+                </tr>
+
+
+                <tr>
+                    <td>Mai 2025</td>
+                    <td>
+                        Sortie du single « Demain »
+                    </td>
+                    <td>Plateformes</td>
+                </tr>
+
             </table>
+
         </section>
 
-        <footer>
-            <p>Contact : <a href="mailto:tomdarbongm@gmail.com" class="email-link" style="color:#5DA9F5;">tomdarbongm@gmail.com</a></p>
-        </footer>
-    </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <p>
+            Contact :
+            <a href="mailto:tomdarbongm@gmail.com"
+               class="email-link"
+               style="color:#5DA9F5;">
+                tomdarbongm@gmail.com
+            </a>
+        </p>
+
+    </footer>
+
+
+</main>
+
+
 </body>
+
 </html>
