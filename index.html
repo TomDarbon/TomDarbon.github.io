@@ -13,6 +13,15 @@
       gtag('js', new Date());
       gtag('config', 'G-RQXT31W9RH');
     </script>
+<style>
+.td-choices{max-width:1050px;margin:35px auto 55px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.td-choices a{background:#242424;border:1px solid #555;border-radius:10px;padding:32px 20px;text-align:center;text-decoration:none;color:white;display:flex;flex-direction:column;gap:12px;transition:transform .2s,border-color .2s}
+.td-choices a:hover{transform:translateY(-3px);border-color:#ff951a}
+.td-choices strong{font-size:23px}.td-choices small{font-size:15px;color:#ddd}
+.td-choices a span:last-child,.td-choice-icon{color:#ff951a;font-weight:bold}
+.td-choice-icon{font-size:35px}
+@media(max-width:650px){.td-choices{grid-template-columns:1fr}.td-choices strong{font-size:20px}}
+</style>
 </head>
 
 <head>
@@ -63,14 +72,14 @@
 		<nav>
 			<div class="menu-container">
 				<ul class="menu-left">
-					<li><a href="index.html" class="active">Accueil & Vidéos</a></li>
-					<li><a href="bio.html">Bio/carrière</a></li>
-					<li><a href="presse.html">Presse</a></li>
-					<li><a href="soundcloud.html">Soundcloud</a></li>
-					<li><a href="dates.html">Dates</a></li>
-					<li><a href="repertoire.html">Répertoire Live</a></li>
-					<li><a href="boutique.html">Boutique</a></li>
-				</ul>
+<li><a href="index.html" class="active">Accueil</a></li>
+<li><a href="bio.html">Bio/carrière</a></li>
+<li><a href="presse.html">Presse</a></li>
+<li><a href="compos.html">Compos & Albums</a></li>
+<li><a href="covers.html">Covers UK/US – Live</a></li>
+<li><a href="dates.html">Dates</a></li>
+<li><a href="boutique.html">Boutique</a></li>
+</ul>
 
 				<div class="social-icons">
 					<a href="https://www.facebook.com/profile.php?id=100064159446245" target="_blank" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
@@ -119,191 +128,11 @@
 		</div>
     <script src="carousel.js"></script>
 	
-	<!-- Début section vidéos en encarts beiges -->
-<div class="videos-grid">
-
-    <div class="video-card">
-        <h3>Le clip de mon nouveau single, "Métamorphose"</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/A_Icgrg7T0A" 
-                    title="Clip Métamorphose" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
-    <div class="video-card">
-        <h3>Mon interview sur Fréquence Plus du 31/08/26</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/T7oV3Mh_TP8" 
-                    title="Itw F+" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
-<div class="video-card">
-    <h3>Un super-teaser de 7 titres de mon prochain album !</h3>
-
-    <div class="video-container">
-        <iframe 
-            id="yt-short-N4yTnp0Cg5w"
-            src="https://www.youtube.com/embed/N4yTnp0Cg5w"
-            title="Super-Teaser 7 titres du prochain album"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-
-        <!-- Fallback si l’embed est bloqué -->
-        <div class="yt-fallback" style="display:none; text-align:center; padding:30px;">
-            <p>🎬 Cette vidéo est un YouTube Short</p>
-            <a href="https://youtube.com/shorts/N4yTnp0Cg5w"
-               target="_blank"
-               style="
-                    display:inline-block;
-                    margin-top:10px;
-                    padding:12px 20px;
-                    background:#e62117;
-                    color:#fff;
-                    text-decoration:none;
-                    border-radius:6px;
-                    font-weight:bold;">
-                ▶️ Voir le Short sur YouTube
-            </a>
-        </div>
-    </div>
-</div>
-
-<script>
-    setTimeout(() => {
-        const iframe = document.getElementById("yt-short-N4yTnp0Cg5w");
-        const fallback = iframe.nextElementSibling;
-
-        try {
-            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-            if (!iframeDoc || iframeDoc.body.innerHTML.trim() === "") {
-                iframe.style.display = "none";
-                fallback.style.display = "block";
-            }
-        } catch (e) {
-            iframe.style.display = "none";
-            fallback.style.display = "block";
-        }
-    }, 1500);
-</script>
-
-
-<div class="video-card">
-    <h3>Interview sur IciBourgogne + France 3 du 10/12/2025</h3>
-
-    <div class="video-container">
-        <iframe 
-            id="yt-short-N4yTnp0Cg5w"
-            src="https://www.youtube.com/embed/Zgtmhzx79Fk"
-            title="Super-Teaser 7 titres du prochain album"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-
-        <!-- Fallback si l’embed est bloqué -->
-        <div class="yt-fallback" style="display:none; text-align:center; padding:30px;">
-            <p>🎬 Cette vidéo est un YouTube Short</p>
-            <a href="https://youtube.com/shorts/Zgtmhzx79Fk"
-               target="_blank"
-               style="
-                    display:inline-block;
-                    margin-top:10px;
-                    padding:12px 20px;
-                    background:#e62117;
-                    color:#fff;
-                    text-decoration:none;
-                    border-radius:6px;
-                    font-weight:bold;">
-                ▶️ Voir le Short sur YouTube
-            </a>
-        </div>
-    </div>
-</div>
-
-<script>
-    setTimeout(() => {
-        const iframe = document.getElementById("yt-short-Zgtmhzx79Fk");
-        const fallback = iframe.nextElementSibling;
-
-        try {
-            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-            if (!iframeDoc || iframeDoc.body.innerHTML.trim() === "") {
-                iframe.style.display = "none";
-                fallback.style.display = "block";
-            }
-        } catch (e) {
-            iframe.style.display = "none";
-            fallback.style.display = "block";
-        }
-    }, 1500);
-</script>
-
-
-
-    <div class="video-card">
-        <h3>Le clip officiel de mon  single "DEMAIN"</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/MTfSKXHfF_M" 
-                    title="Clip DEMAIN" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-	
-    <div class="video-card">
-        <h3>Présentation et extraits du vinyle de l'album "INTACT"</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/MLVwEl31eEU" 
-                    title="Présentation album Intact" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-    <div class="video-card">
-        <h3>Le clip officiel du titre "INTACT"</h3>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/0-0FrtU4KZU" 
-                    title="Clip INTACT" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
-    <div class="video-card">
-        <h3>L'album de WILD a 30 ans !</h3>
-        <div class="video-container">
-            <iframe src="https://youtube.com/embed/t9ToLtu-w2M?feature=share" 
-                    title="Clip INTACT" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-	
-	
-</div>
-<!-- Fin section vidéos -->
-
-
-        <footer>
+	<section class="td-choices" aria-label="Découvrir les deux univers de Tom Darbon">
+<a href="compos.html"><span class="td-choice-icon">♫</span><strong>COMPOS &amp; ALBUMS</strong><small>Chansons originales, clips, interviews et écoute</small><span>Découvrir →</span></a>
+<a href="covers.html"><span class="td-choice-icon">♪</span><strong>COVERS UK/US – LIVE</strong><small>Vidéos de scène et répertoire de reprises</small><span>Voir les vidéos →</span></a>
+</section>
+<footer>
             <p>Contact : <a href="mailto:tomdarbongm@gmail.com" class="email-link" style="color:#5DA9F5;">tomdarbongm@gmail.com</a></p>
         </footer>
     </main>
