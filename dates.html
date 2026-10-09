@@ -272,6 +272,17 @@
 
         }
 
+
+        /* ===== VISUELS DES FORMULES (page Dates uniquement) ===== */
+        .event-info { flex: 1; min-width: 0; }
+        .event-visual {
+            width: 125px; min-width: 125px;
+            align-self: center; margin: 12px 17px 12px 8px;
+            object-fit: contain; max-height: 115px; border-radius: 4px;
+        }
+        @media (max-width: 650px) {
+            .event-visual { width: 68px; min-width: 68px; max-height: 78px; margin: 8px 8px 8px 0; }
+        }
     </style>
 
 </head>
@@ -426,21 +437,42 @@
 
                     <div class="event-info">
 
-                        <h2>Mini-concert à L'effet Boeuf</h2>
+                        <h2>Mini-concert au Barbarian's Pub — avant l'Effet Bœuf</h2>
 
                         <p>
-                            🎸 Showcase de l'album, durée : 30 minutes
+                            🎸 Showcase de l'album, durée : 30 minutes — Entrée libre
                         </p>
 
                         <p>
-                            📍 Dijon (21) - Lieu à préciser  🕢 19h15 à 19h45
+                            📍 Le Barbarian’s Pub, Dijon (21) — 🕢 19h15 à 19h45
                         </p>
 
                     </div>
 
+                <img class="event-visual" src="img/visuel_projet_compos.png" alt="Visuel Projet compos">
                 </div>
 
 
+
+
+                <!-- MJC DOLE : PROJET COMPOS -->
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="event-day">13</span>
+                        <span class="event-month">NOV.</span>
+                        <span class="event-year">2026</span>
+                    </div>
+                    <div class="event-info">
+                        <h2>Concert à la MJC de Dole</h2>
+                        <p>🎸 Projet compos — album « Cœur Battant »</p>
+                        <p>🕗 20h – 21h — <strong>Entrée libre</strong></p>
+                        <p>📍 <strong>9 rue Sombardier, 39100 Dole</strong></p>
+                        <p><a href="https://www.google.com/maps/search/?api=1&amp;query=9+Rue+Sombardier+39100+Dole"
+                              target="_blank" rel="noopener noreferrer"
+                              style="color:#77bcff;">Voir l'adresse sur Google Maps ↗</a></p>
+                    </div>
+                <img class="event-visual" src="img/visuel_projet_compos.png" alt="Visuel Projet compos">
+                </div>
 
                 <!-- AUTHUME -->
 
@@ -460,7 +492,7 @@
                         <h2>Concert avec Dollmen et CYCLOPE</h2>
 
                         <p>
-                            🎸 Salle des fêtes d'Authume
+                            🎸 Salle des fêtes d'Authume — Entrée : 15 € (préventes 13 €)
                         </p>
 
                         <p>
@@ -469,6 +501,7 @@
 
                     </div>
 
+                <img class="event-visual" src="img/visuel_projet_compos.png" alt="Visuel Projet compos">
                 </div>
 
                 <!-- CHAMPA -->
@@ -491,6 +524,7 @@
                         </p>
 
                     </div>
+                <img class="event-visual" src="img/visuel_projet_compos.png" alt="Visuel Projet compos">
                 </div>
 
 
@@ -512,6 +546,7 @@
                             📍 Givry (71) — 🕗 En soirée
                         </p>
                     </div>
+                <img class="event-visual" src="img/visuel_compos_covers.png" alt="Visuel Compos et covers UK/US">
                 </div>
 				
 				
