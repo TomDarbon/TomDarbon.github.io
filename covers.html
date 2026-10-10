@@ -3,80 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Darbon - Accueil</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQXT31W9RH"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-RQXT31W9RH');
-    </script>
-<style>
-.td-live-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
-.td-live-card{background:#252525;border:1px solid #494949;border-radius:10px;padding:22px;text-align:center;min-width:0}
-.td-live-card h2{font-size:22px;margin:0 0 12px}.td-live-card p{color:#ddd;min-height:42px}
-.td-live-card a{display:inline-block;color:#ffab43;margin-top:15px}
-.td-live-video{position:relative;background:#111;margin:auto;overflow:hidden;border-radius:7px}
-.td-live-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
-.td-portrait{aspect-ratio:9/16;max-width:290px}.td-landscape{aspect-ratio:16/9;width:100%}
-.td-live-repertoire{background:#242424;padding:25px;margin-top:40px;border-radius:10px}
-.td-live-repertoire h2{margin-top:0}.td-live-repertoire h3{font-size:21px;margin:24px 0 10px}
-.td-live-repertoire li{margin:7px 0}
-@media(max-width:750px){.td-live-grid{grid-template-columns:1fr}.td-live-card{padding:16px}.td-live-card p{min-height:0}}
-</style></head>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Darbon - Covers UK/US Live</title>
+    <title>Tom Darbon - Covers UK/US – Live</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQXT31W9RH"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-RQXT31W9RH');</script>
     <style>
-        /* ======= RÉPERTOIRE ======= */
-        .repertoire-section {
-            background-color: #222; /* gris foncé */
-            padding: 40px 20px;
-            color: white;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Titres principaux : COMPOSITIONS / REPRISES */
-        .repertoire-section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        /* Titres secondaires : références aux albums */
-        .repertoire-section h3 {
-            font-size: 24px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            color: white;
-        }
-
-        /* Titres de niveau 3 : titres des chansons */
-        .repertoire-section li {
-            font-size: 18px;
-            margin-left: 20px;
-            margin-bottom: 5px;
-        }
-
-        /* Pour les listes */
-        .repertoire-section ul {
-            padding-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        /* Responsive : taille du texte plus petite sur mobile */
-        @media (max-width: 768px) {
-            .repertoire-section h2 { font-size: 28px; }
-            .repertoire-section h3 { font-size: 20px; }
-            .repertoire-section li { font-size: 16px; }
-        }
+        /* Mise en page spécifique à la page Covers : aucun changement de styles.css */
+        .td-live { max-width:1120px; margin:0 auto; padding:22px 18px 55px; }
+        .td-live h1 { text-align:center; margin:12px 0; }
+        .td-live-intro { text-align:center; max-width:920px; margin:0 auto 40px; line-height:1.6; font-size:1.3rem; color:#f1f1f1; }
+        .td-live-intro strong { color:#ffbd65; font-weight:700; }
+        .td-live-group { margin-top:42px; }
+        .td-live-group h2 { font-size:1.75rem; margin:0 0 10px; color:#fff; border-left:5px solid #B3002D; padding-left:13px; }
+        .td-live-group > p { margin:0 0 24px; line-height:1.65; color:#e1e1e1; font-size:1.08rem; }
+        .td-live-group > p strong { color:#ffbd65; }
+        .td-live-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; align-items:stretch; }
+        .td-live-card { background:#252525; border:1px solid #494949; border-radius:10px; padding:22px; text-align:center; min-width:0; display:flex; flex-direction:column; align-items:center; }
+        .td-live-card h3 { font-size:1.3rem; margin:0 0 10px; color:#ffbd65; }
+        .td-live-card p { color:#ddd; line-height:1.5; margin:0 0 18px; }
+        .td-live-card p strong { color:#fff; }
+        .td-live-video { position:relative; background:#111; overflow:hidden; border-radius:7px; width:100%; margin-top:auto; }
+        .td-live-video iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+        .td-portrait { aspect-ratio:9/16; max-width:290px; }
+        .td-landscape { aspect-ratio:16/9; max-width:100%; }
+        .td-live-card a { display:inline-block; color:#ffab43; margin-top:18px; }
+        .td-live-repertoire { background:#242424; padding:25px; margin-top:45px; border-radius:10px; }
+        .td-live-repertoire h2 { margin-top:0; color:#ffbd65; }
+        .td-live-repertoire h3 { font-size:21px; margin:24px 0 10px; }
+        .td-live-repertoire li { margin:7px 0; }
+        @media(max-width:750px) { .td-live-grid { grid-template-columns:1fr; } .td-live-card { padding:16px; } .td-live { padding:20px 12px 40px; } }
     </style>
 </head>
 <body>
@@ -133,24 +89,50 @@
     </header>
 
     <main>
-        <section class="td-live" style="max-width:1120px;margin:0 auto;padding:10px 12px 45px">
-<h1 style="text-align:center;margin-bottom:10px">Covers UK/US – Live</h1>
-<p style="text-align:center;max-width:820px;margin:0 auto 35px;line-height:1.6">Pop et rock en live : une guitare, une voix, de l'énergie et le plaisir de partager la musique avec le public.</p>
-<div class="td-live-grid">
-<article class="td-live-card">
-<h2>Where The Streets Have No Name — U2</h2>
-<p>Solo acoustique · chant et guitare</p>
-<div class="td-live-video td-portrait"><iframe src="https://www.youtube-nocookie.com/embed/1C6c2JlLTaw" title="Where The Streets Have No Name - Tom Darbon solo acoustique" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-<a href="https://youtube.com/shorts/1C6c2JlLTaw" target="_blank" rel="noopener noreferrer">Voir sur YouTube ↗</a>
-</article>
-<article class="td-live-card">
-<h2>Viva La Vida — Coldplay</h2>
-<p>Live à La Karrière · prestation en duo, interaction avec le public</p>
-<div class="td-live-video td-landscape"><iframe src="https://www.youtube-nocookie.com/embed/2gUeL7kGuOQ" title="Viva La Vida - Tom Darbon à La Karrière" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-<a href="https://youtu.be/2gUeL7kGuOQ" target="_blank" rel="noopener noreferrer">Voir sur YouTube ↗</a>
-</article>
-</div>
-<div class="td-live-repertoire">
+        <section class="td-live">
+            <h1>Covers UK/US – Live</h1>
+            <p class="td-live-intro"><strong>De Bowie à Coldplay, en passant par Rihanna et U2</strong> : des reprises pop-rock revisitées à la guitare et à la voix. Découvrez d’abord <strong>l’énergie des concerts</strong>, puis mes sessions acoustiques en home studio.</p>
+
+            <section class="td-live-group" aria-labelledby="scene-title">
+                <h2 id="scene-title">Sur scène – Live</h2>
+                <p>Des reprises jouées devant le public : <strong>énergie, interprétation et interaction avec le public</strong>.</p>
+                <div class="td-live-grid">
+                    <article class="td-live-card">
+                        <h3>Where The Streets Have No Name — U2</h3>
+                        <p><strong>Live solo acoustique</strong> · chant et guitare</p>
+                        <div class="td-live-video td-portrait"><iframe src="https://www.youtube-nocookie.com/embed/1C6c2JlLTaw" title="Where The Streets Have No Name — U2, Tom Darbon en solo acoustique" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                        <a href="https://youtube.com/shorts/1C6c2JlLTaw" target="_blank" rel="noopener noreferrer">Voir sur YouTube ↗</a>
+                    </article>
+                    <article class="td-live-card">
+                        <h3>Viva La Vida — Coldplay</h3>
+                        <p><strong>Live à La Karrière</strong> · prestation en duo · interaction avec le public</p>
+                        <div class="td-live-video td-landscape"><iframe src="https://www.youtube-nocookie.com/embed/2gUeL7kGuOQ" title="Viva La Vida — Coldplay, Tom Darbon à La Karrière" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                        <a href="https://youtu.be/2gUeL7kGuOQ" target="_blank" rel="noopener noreferrer">Voir sur YouTube ↗</a>
+                    </article>
+                </div>
+            </section>
+
+
+            <section class="td-live-group" aria-labelledby="sessions-title">
+                <h2 id="sessions-title">Sessions acoustiques – Home studio</h2>
+                <p><strong>Une voix, ma guitare Taylor</strong> et des arrangements épurés, enregistrés en acoustique dans mon home studio.</p>
+                <div class="td-live-grid">
+                    <article class="td-live-card">
+                        <h3>Space Oddity — David Bowie</h3>
+                        <p><strong>Reprise acoustique</strong> · chant et guitare Taylor · home studio</p>
+                        <div class="td-live-video td-portrait"><iframe src="https://www.youtube-nocookie.com/embed/3c-inCNWSes" title="Space Oddity — David Bowie, reprise acoustique par Tom Darbon" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                        <a href="https://www.youtube.com/shorts/3c-inCNWSes" target="_blank" rel="noopener noreferrer">Voir sur YouTube ↗</a>
+                    </article>
+                    <article class="td-live-card">
+                        <h3>Umbrella — Rihanna</h3>
+                        <p><strong>Réinterprétation acoustique</strong> · chant et guitare Taylor · home studio</p>
+                        <div class="td-live-video td-portrait"><iframe src="https://www.youtube-nocookie.com/embed/hx3T4iA3-FI" title="Umbrella — Rihanna, reprise acoustique par Tom Darbon" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+                        <a href="https://www.youtube.com/shorts/hx3T4iA3-FI" target="_blank" rel="noopener noreferrer">Voir sur YouTube ↗</a>
+                    </article>
+                </div>
+            </section>
+
+            <div class="td-live-repertoire">
 <h2>Répertoire live</h2>
 <p>Quelques titres du répertoire, en français et en anglais :</p>
 <h2>Reprises</h2>
