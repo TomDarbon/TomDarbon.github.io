@@ -13,15 +13,13 @@
       gtag('js', new Date());
       gtag('config', 'G-RQXT31W9RH');
     </script>
-</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Darbon - Boutique</title>
+    
+    
+    
 
     <!-- Styles principaux -->
-    <link rel="stylesheet" href="styles.css">
+    
 
     <!-- Font Awesome via CDN (fonctionne en local et en ligne) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -29,43 +27,69 @@
     <!-- Lien vers Paypal avec le client ID (AaRuI2...) de l'app "Boutique Tom Darbon Live" créée sur Paypal -->
     <script src="https://www.paypal.com/sdk/js?client-id=AaRuI2tUH3JO_kLNxvJxUPS_hpznugUQ_4IRCAOjWhL6ipYjE0ZeVrIHxtX8rc6yvvxgZjS7Ft4kStay&currency=EUR" data-sdk-integration-source="button-factory"></script> 
 
+<style>
+
+/* ===== TOM DARBON : EN-TÊTE RESPONSIVE, LOCAL À CETTE PAGE ===== */
+.td-promo{background:#111;color:#fff;border-bottom:1px solid #383838;padding:22px 18px;font-family:Arial,sans-serif;box-sizing:border-box}
+.td-promo *{box-sizing:border-box}
+.td-promo-inner{max-width:1020px;margin:auto;display:flex;align-items:center;justify-content:center;gap:28px}
+.td-promo-cover{width:185px;max-width:35%;height:auto;flex-shrink:0;border-radius:7px;display:block}
+.td-promo-copy{max-width:620px;min-width:0}
+.td-promo-kicker{color:#ff9b25;font-size:14px;font-weight:700;letter-spacing:2px;margin:0 0 6px}
+.td-promo h2{color:#fff;font-size:clamp(22px,2.5vw,32px);line-height:1.15;letter-spacing:1px;margin:0 0 8px;overflow-wrap:normal}
+.td-promo p{font-size:16px;line-height:1.5;margin:0 0 14px;color:#e1e1e1}
+.td-promo-button{display:inline-block;padding:11px 20px;border-radius:6px;background:#ff941b;color:#171717!important;font-size:15px;font-weight:800;text-decoration:none}
+.td-promo-button:hover{background:#ffb14e}
+.td-header nav .td-mobile-bar{display:none}
+.td-header .banner{max-width:100%;height:auto}
+.td-mobile-dates{display:none}
+@media(max-width:768px){
+ .td-promo{padding:15px 14px}
+ .td-promo-inner{gap:13px;align-items:center;justify-content:flex-start}
+ .td-promo-cover{width:112px;max-width:32%;border-radius:5px}
+ .td-promo-copy{flex:1}
+ .td-promo-kicker{font-size:10px;letter-spacing:1px;margin-bottom:4px}
+ .td-promo h2{font-size:clamp(17px,4.6vw,23px);letter-spacing:0;line-height:1.15;margin-bottom:6px}
+ .td-promo p{font-size:12px;line-height:1.35;margin-bottom:9px}
+ .td-promo-button{font-size:12px;padding:9px 11px}
+ .td-header .banner{display:none!important}
+ .td-mobile-dates{display:block;background:#161616;color:#fff;padding:12px 14px;border-bottom:1px solid #333}
+ .td-mobile-dates-title{font-size:13px;font-weight:700;letter-spacing:1px;color:#ff9b25;margin:0 0 8px;text-align:center}
+ .td-mobile-dates-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;max-width:580px;margin:auto}
+ .td-mobile-date{display:block;text-align:center;background:#292929;border:1px solid #414141;border-radius:7px;padding:9px 4px;color:white;text-decoration:none;min-width:0}
+ .td-mobile-date strong{display:block;color:#ff9b25;font-size:13px;white-space:nowrap}
+ .td-mobile-date span{display:block;font-size:11px;line-height:1.35;margin-top:3px}
+ .td-mobile-dates-more{display:block;text-align:center;color:#ffab48;margin-top:9px;font-size:12px;text-decoration:none;font-weight:bold}
+ .td-header nav{padding:0!important}
+ .td-header nav .td-mobile-bar{display:flex;align-items:center;justify-content:space-between;padding:11px 16px;gap:12px}
+ .td-mobile-brand{color:#fff;font-size:17px;font-weight:800;letter-spacing:1.4px;text-decoration:none}
+ .td-menu-toggle{display:inline-flex;align-items:center;gap:8px;background:#303030;border:1px solid #666;border-radius:6px;color:white;padding:9px 12px;font-size:14px;cursor:pointer}
+ .td-header nav .menu-container{display:none!important;padding:10px 16px 18px!important;max-width:none!important}
+ .td-header nav.td-menu-open .menu-container{display:flex!important;flex-direction:column;align-items:stretch}
+ .td-header nav ul.menu-left{display:flex!important;flex-direction:column!important;gap:0!important;width:100%}
+ .td-header nav ul.menu-left li{margin:0!important;text-align:left;border-bottom:1px solid #3b3b3b}
+ .td-header nav ul.menu-left li a{display:block;padding:12px 5px;font-size:16px}
+ .td-header nav .social-icons{justify-content:center;margin:14px 0 0}
+}
+@media(max-width:360px){.td-promo-cover{width:94px}.td-promo h2{font-size:17px}.td-promo p{font-size:11px}.td-mobile-date strong{font-size:12px}.td-mobile-date span{font-size:10px}}
+
+</style>
 </head>
 <body>
 
 <!-- Bloc temporaire précommande -->
 <!-- ======= PRECOMMANDE ALBUM (BLOC TEMPORAIRE SANS CSS) ======= -->
-<div style="background:#111; color:#fff; padding:20px; border-bottom:1px solid #333; font-family:Arial, sans-serif;">
-    
-    <div style="display:flex; align-items:center; gap:20px; max-width:900px; margin:0 auto;">
-        
-        <img src="img/Tom-Digi-Recto.jpg" alt="Album Coeur Battant" 
-             style="width:160px; border-radius:4px;">
-        
-        <div>
-            <h2 style="margin:0 0 10px 0; font-size:1.4em;color:#B3002D;">
-			   Nouvel album : "Coeur Battant"<br>
-			   Disponible !
-			   </h2>
-            
-            <p style="margin:0 0 15px 0; line-height:1.4;">
-                CD digipack, livret 8 pages couleur, paroles incluses.<br>
-                Livraison sous 3 à 5j ouvrés.<br>
-				<br>Rendez-vous ci-dessous pour le commander
-
-            </p>
-
-            <div id="paypal-button-container-precommande"></div>
-        </div>
-    </div>
-</div>
+<section class="td-promo" aria-label="Nouvel album Cœur Battant"><div class="td-promo-inner"><img class="td-promo-cover" src="img/Tom-Digi-Recto.jpg" alt="Pochette de l’album Cœur Battant de Tom Darbon"><div class="td-promo-copy"><div class="td-promo-kicker">NOUVEL ALBUM DISPONIBLE</div><h2>CŒUR BATTANT</h2><p>CD digipack · Livret couleur 8 pages avec paroles.<br>Livraison sous 3 à 5 jours ouvrés.</p><a class="td-promo-button" href="boutique.html">Commander l’album →</a></div></div></section>
 
 
-<!-- ======= BANNIÈRE ======= -->
+<header class="td-header"><!-- ======= BANNIÈRE ======= -->
 <img src="img/assets_banner.jpg" alt="Bannière Tom Darbon" class="banner">
 
 <!-- ======= MENU ======= -->
+<section class="td-mobile-dates" aria-label="Prochains concerts"><div class="td-mobile-dates-title">PROCHAINS CONCERTS</div><div class="td-mobile-dates-list"><a class="td-mobile-date" href="dates.html"><strong>04/11/26</strong><span>DIJON<br>Barbarian’s Pub</span></a><a class="td-mobile-date" href="dates.html"><strong>11/11/26</strong><span>CHEVIGNY<br>M’Beer</span></a><a class="td-mobile-date" href="dates.html"><strong>13/11/26</strong><span>DOLE<br>MJC</span></a></div><a class="td-mobile-dates-more" href="dates.html">Voir toutes les dates →</a></section>
 <nav>
-    <div class="menu-container">
+    <div class="td-mobile-bar"><a class="td-mobile-brand" href="index.html">TOM DARBON</a><button class="td-menu-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le menu">☰ Menu</button></div>
+<div class="menu-container">
         <ul class="menu-left">
 <li><a href="index.html">Accueil</a></li>
 <li><a href="bio.html">Bio/carrière</a></li>
@@ -82,7 +106,7 @@
 			<a href="https://www.youtube.com/@TomDarbonOfficiel" target="_blank" class="social-icon yt"><i class="fab fa-youtube"></i></a>
         </div>
     </div>
-</nav>
+</nav></header>
 
 <!-- ======= CONTENU PRINCIPAL ======= -->
 <div class="main-content">
@@ -597,5 +621,6 @@
 <!-- Font Awesome pour icônes sociales -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
+<script>document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.td-header nav').forEach(function(nav){var btn=nav.querySelector('.td-menu-toggle');if(!btn)return;btn.addEventListener('click',function(){var open=nav.classList.toggle('td-menu-open');btn.setAttribute('aria-expanded',String(open));});});});</script>
 </body>
 </html>

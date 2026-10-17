@@ -1,0 +1,7 @@
+Site Tom Darbon - refonte responsive
+
+Remplacer les fichiers HTML, CSS et JS du dépôt par ceux de cette archive.
+Le contenu de styles.css est strictement inchangé.
+Conserver tous les dossiers images et autres fichiers existants dans le dépôt GitHub.
+Les nouvelles règles CSS sont dans chaque page HTML.
+Le bandeau de dates mobile est à mettre à jour dans les sept pages lors des changements de concerts.
