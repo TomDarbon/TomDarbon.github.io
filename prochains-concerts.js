@@ -3,10 +3,10 @@
    date : date affichée ; lieu : ville ; salle : nom de l'établissement ; horaire : horaires.
 */
 const prochainsConcerts = [
-  { date: '04/11/26', lieu: 'DIJON (21)', salle: 'Barbarian’s Pub', horaire: '19h15 – 19h45' },
-  { date: '11/11/26', lieu: 'CHEVIGNY (21)', salle: 'M’Beer', horaire: '19h – 22h30' },
-  { date: '13/11/26', lieu: 'DOLE (39)', salle: 'MJC de Dole', horaire: '20h – 21h' },
-  { date: '28/11/26', lieu: 'AUTHUME (39)', salle: 'Soirée rock · 20h30', horaire: 'Dollmen + Cyclope' }
+  { date: '27/11/26', lieu: 'DIJON (21)', salle: 'Dij'Eat', horaire: '19h30 – 21h' },
+  { date: '28/11/26', lieu: 'AUTHUME (39)', salle: 'Soirée rock · 20h30', horaire: 'Dollmen + CYCLOPE' }
+  { date: '4/12/26', lieu: 'DOLE (39)', salle: 'Le Parisien', horaire: '19h30 – 23h' },
+  { date: '9/01/27', lieu: 'CHOISEY (39)', salle: 'Pub Le Callahan', horaire: '20h – 23h' },
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
