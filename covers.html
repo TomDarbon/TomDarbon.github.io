@@ -81,11 +81,41 @@
 @media(max-width:360px){.td-promo-cover{width:94px}.td-promo h2{font-size:17px}.td-promo p{font-size:11px}.td-mobile-date strong{font-size:12px}.td-mobile-date span{font-size:10px}}
 
 </style>
+<style>
+/* ===== MISE EN AVANT RTL : ACCUEIL ===== */
+.td-rtl{max-width:1050px;margin:10px auto;padding:14px 18px;background:#191919;border:1px solid #444;border-radius:12px;color:#fff;box-sizing:border-box}
+.td-rtl-inner{display:flex;align-items:center;justify-content:center;gap:20px}
+.td-rtl-copy{flex:1;min-width:0;max-width:550px}
+.td-rtl-kicker{color:#ff9b25;font-size:14px;font-weight:800;letter-spacing:1.5px;margin:0 0 10px}
+.td-rtl h2{color:#fff;font-size:clamp(20px,2.4vw,28px);line-height:1.15;margin:0 0 8px}
+.td-rtl p{color:#e5e5e5;font-size:14px;line-height:1.35;margin:0 0 8px}
+.td-rtl-link{color:#ffad4e;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.td-rtl-video{width:145px;max-width:100%;flex:0 0 145px;aspect-ratio:9/16;border-radius:9px;overflow:hidden;background:#090909}
+.td-rtl-video iframe{display:block;width:100%;height:100%;border:0}
+@media(max-width:650px){.td-rtl{margin:6px 8px;padding:10px}.td-rtl-inner{flex-direction:row;align-items:flex-start;gap:10px}.td-rtl-copy{text-align:left}.td-rtl-kicker{font-size:10px;margin-bottom:4px}.td-rtl h2{font-size:17px;margin-bottom:5px}.td-rtl p{font-size:11px;line-height:1.3;margin-bottom:5px}.td-rtl-link{font-size:11px}.td-rtl-video{width:105px;flex:0 0 105px}}
+</style>
 </head>
 <body>
 <!-- Bloc temporaire précommande -->
 <!-- ======= PRECOMMANDE ALBUM (BLOC TEMPORAIRE SANS CSS) ======= -->
 <section class="td-promo" aria-label="Nouvel album Cœur Battant"><div class="td-promo-inner"><img class="td-promo-cover" src="img/Tom-Digi-Recto.jpg" alt="Pochette de l’album Cœur Battant de Tom Darbon"><div class="td-promo-copy"><div class="td-promo-kicker">NOUVEL ALBUM DISPONIBLE</div><h2>CŒUR BATTANT</h2><p>CD digipack · Livret couleur 8 pages avec paroles.<br>Livraison sous 3 à 5 jours ouvrés.</p><a class="td-promo-button" href="boutique.html">Commander l’album →</a></div></div></section>
+
+        <!-- Mise en avant du passage sur RTL (15 novembre 2026) -->
+        <section class="td-rtl" aria-labelledby="td-rtl-title">
+            <div class="td-rtl-inner">
+                <div class="td-rtl-copy">
+                    <p class="td-rtl-kicker">📻 TOM DARBON SUR RTL</p>
+                    <h2 id="td-rtl-title">Mes chansons à l’honneur sur RTL !</h2>
+                    <p>Dimanche 15 novembre, Valérie Quintin a présenté mon univers musical sur RTL, avec deux extraits : <strong>« Métamorphose »</strong>, tiré de mon album <em>Cœur battant</em>, et <strong>« Demain »</strong>, mon single avec Alien Poe en featuring.</p>
+                    <p>Un grand merci à Valérie Quintin pour ce coup de projecteur sur la musique indépendante !</p>
+                    <a class="td-rtl-link" href="https://www.youtube.com/shorts/z4MSKduMEUw" target="_blank" rel="noopener noreferrer">Voir aussi le Short sur YouTube ↗</a>
+                </div>
+                <div class="td-rtl-video">
+                    <iframe src="https://www.youtube-nocookie.com/embed/z4MSKduMEUw" title="Tom Darbon sur RTL : Métamorphose et Demain, présentés par Valérie Quintin" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
 
     <header class="td-header">
         <img src="img/assets_banner.jpg" alt="Bannière Tom Darbon" class="banner">
