@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tom Darbon - Accueil</title>
+    <title>Tom Darbon - Boutique | Black Friday 2026</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RQXT31W9RH"></script>
@@ -73,6 +73,19 @@
 }
 @media(max-width:360px){.td-promo-cover{width:94px}.td-promo h2{font-size:17px}.td-promo p{font-size:11px}.td-mobile-date strong{font-size:12px}.td-mobile-date span{font-size:10px}}
 
+
+/* ===== BLACK FRIDAY 2026 ===== */
+.bf-banner{background:#b60016;color:#fff;text-align:center;padding:26px 15px;border-top:4px solid #e33a47;border-bottom:4px solid #85000d;font-family:Arial,sans-serif}
+.bf-banner h2{color:#fff!important;font-size:clamp(27px,4.6vw,52px);font-weight:900;letter-spacing:2px;line-height:1.12;margin:0 0 10px}
+.bf-banner .bf-subtitle{color:#fff;font-size:clamp(17px,2.6vw,28px);font-weight:800;line-height:1.25;margin:0 0 9px}
+.bf-banner .bf-dates{color:#fff;font-size:clamp(13px,1.7vw,18px);margin:0}
+.bf-price{display:flex;align-items:baseline;justify-content:center;flex-wrap:wrap;gap:10px;margin:3px 0 10px;line-height:1.3}
+.bf-old{color:#666;text-decoration:line-through;font-size:17px;font-weight:500}
+.bf-new{color:#c50018;font-size:clamp(24px,2.5vw,30px);font-weight:900}
+.bf-discount{display:inline-block;background:#b60016;color:white;font-size:12px;font-weight:800;padding:3px 7px;border-radius:4px;vertical-align:middle}
+.bf-note{display:block;font-size:13px;line-height:1.45;color:#555;font-style:italic;margin:8px 0 12px}
+.bf-standard{display:block;font-size:21px;font-weight:800;margin:3px 0 10px}
+@media(max-width:600px){.bf-banner{padding:20px 12px}.bf-price{gap:7px}.bf-old{font-size:15px}}
 </style>
 <style>
 /* ===== MISE EN AVANT RTL : ACCUEIL ===== */
@@ -139,6 +152,12 @@
     </div>
 </nav></header>
 
+<section class="bf-banner" aria-label="Offres Black Friday 2026">
+  <h2>BLACK FRIDAY</h2>
+  <p class="bf-subtitle">JUSQU’À −40 % SUR LES ANCIENS ALBUMS !</p>
+  <p class="bf-dates">Du 20 au 27 novembre 2026 inclus · Frais de livraison inclus</p>
+</section>
+
 <!-- ======= CONTENU PRINCIPAL ======= -->
 <div class="main-content">
     <h1>Boutique officielle</h1>
@@ -168,7 +187,7 @@
             <img src="img/Tom-Digi-Recto.jpg" alt="Album Coeur Battant CD">
             <h2>Album "Coeur battant" - CD</h2>
             <p>
-			<b>15 euros</b><br>
+			<strong class="bf-standard">15 €</strong><br>
                Neuf, sous blister.<br>
                Format digipack, incluant un livret 8 pages tout couleur avec l'intégralité des paroles.<br>
                <b>Le tarif inclut les frais de livraison.</b><br>
@@ -217,7 +236,7 @@
             <img src="img/TomDarbon_Intact_CD.jpg" alt="Album Intact CD">
             <h2>Album "Intact" - CD</h2>
             <p>
-			<b>15 euros</b><br>
+			<span class="bf-price"><span class="bf-old">15 €</span><strong class="bf-new">10 €</strong><span class="bf-discount">−33 %</span></span><br>
                Neuf, sous blister.<br>
                Format digipack, incluant un livret 8 pages tout couleur avec l'intégralité des paroles.<br>
                <b>Le tarif inclut les frais de livraison.</b><br>
@@ -239,7 +258,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '15.00' // 💰 remplace par ton prix
+									value: '10.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "Intact" - CD'
 							}]
@@ -264,7 +283,7 @@
             <img src="img/TomDarbon_Intact_Vinyle.jpg" alt="Album Intact Vinyle">
             <h2>Album "Intact" - Vinyle</h2>
             <p>
-			<b>25 euros</b><br>
+			<span class="bf-price"><span class="bf-old">25 €</span><strong class="bf-new">15 €</strong><span class="bf-discount">−40 %</span></span><br>
                Neuf, sous blister.<br>
                Vinyle 180g, sous-pochette en carton épais avec l'intégralité des paroles.<br>
                <b>Le tarif inclut les frais de livraison.</b><br>
@@ -285,7 +304,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '25.00' // 💰 remplace par ton prix
+									value: '15.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "Intact" - Vinyle'
 							}]
@@ -310,7 +329,7 @@
 			<img src="img/AlienPoe_EDD.jpg" alt="Album EDD CD">
 			<h2>Album "Les enfants du désordre" - CD (Avec Alien Poe)</h2>
 			<p>
-			<b>12 euros</b><br>
+			<span class="bf-price"><span class="bf-old">12 €</span><strong class="bf-new">8 €</strong><span class="bf-discount">−33 %</span></span><br>
 				CD gravé, neuf.<br>
 				Format boitier plastique. Livret incluant l'intégralité des paroles.<br>
 				Illustrations de Jean-Louis Thouard.<br>
@@ -333,7 +352,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '12.00' // 💰 remplace par ton prix
+									value: '8.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "Les enfants du désordre" - CD'
 							}]
@@ -356,7 +375,7 @@
 		<div class="product">
 			<img src="img/WILD_IDM_CD.jpg" alt="Album WILD  CD">
 			<h2>Album "I don't Mind" - CD (Avec Wild)</h2>
-			<p><b>12 euros.</b><br>
+			<p><span class="bf-price"><span class="bf-old">12 €</span><strong class="bf-new">8 €</strong><span class="bf-discount">−33 %</span></span><br>
 				Neuf, sous blister.<br>
 				Format boitier plastique. Livret incluant l'intégralité des paroles.<br>
 				<b>Le tarif inclut les frais de livraison.</b><br>
@@ -378,7 +397,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '12.00' // 💰 remplace par ton prix
+									value: '8.00' // 💰 remplace par ton prix
 								},
 								description: 'Album "I dont mind" (Avec WILD) - CD'
 							}]
@@ -409,7 +428,7 @@
 			<img src="img/ChatGPT PACK CD CB_INTACT.png" alt="PACK CB_INTACT">
 			<h2>PACK TOM DARBON "COEUR BATTANT" + "INTACT"</h2>
 			<p>
-            <b>25 euros</b><br>
+            <span class="bf-price"><span class="bf-old">25 €</span><strong class="bf-new">20 €</strong><span class="bf-discount">−20 %</span></span><span class="bf-note">Offre Black Friday : remise appliquée uniquement aux anciens albums. Le nouvel album « Cœur battant » conserve son prix habituel de 15 €.</span>
 			CD TOM DARBON "Coeur battant"<br>			 
 			+ CD TOM DARBON "Intact"<br>
 			<b>Le tarif inclut les frais de livraison.</b><br>
@@ -431,7 +450,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '25.00' // 💰 remplace par ton prix
+									value: '20.00' // 💰 remplace par ton prix
 								},
 								description: 'PACK CD Tom Darbon "Coeur battant" + "Intact"'
 							}]
@@ -455,7 +474,7 @@
 			<img src="img/PACK INTACT.jpg" alt="PACK INTACT">
 			<h2>PACK TOM DARBON "INTACT"</h2>
 			<p>
-            <b>35 euros</b><br>
+            <span class="bf-price"><span class="bf-old">35 €</span><strong class="bf-new">25 €</strong><span class="bf-discount">−29 %</span></span><br>
 			CD TOM DARBON "Intact"<br>			 
 			+ VINYLE TOM DARBON "Intact"<br>
 			<b>Le tarif inclut les frais de livraison.</b><br>
@@ -477,7 +496,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '35.00' // 💰 remplace par ton prix
+									value: '25.00' // 💰 remplace par ton prix
 								},
 								description: 'PACK Tom Darbon "Intact" (CD + VINYLE)'
 							}]
@@ -501,7 +520,7 @@
 			<img src="img/PACK AP_WILD.jpg" alt="PACK AP_WILD">
 			<h2>PACK WILD + ALIEN POE</h2>
 			<p>
-            <b>20 euros</b><br>
+            <span class="bf-price"><span class="bf-old">20 €</span><strong class="bf-new">15 €</strong><span class="bf-discount">−25 %</span></span><br>
 			CD WILD "I don't mind"<br>
 			+ CD ALIEN POE "Les enfants du désordre"<br>
 			<b>Le tarif inclut les frais de livraison.</b><br>
@@ -523,7 +542,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '20.00' // 💰 remplace par ton prix
+									value: '15.00' // 💰 remplace par ton prix
 								},
 								description: 'PACK Alien Poe "Les enfants du désordre" (CD) + WILD "I dont mind" (CD)'
 							}]
@@ -547,7 +566,7 @@
 			<img src="img/LA TOTALE_CD.jpg" alt="PACK AP_WILD_TD">
 			<h2>PACK WILD + ALIEN POE + "INTACT" + "COEUR BATTANT"</h2>
 			<p>
-            <b>40 euros</b><br>
+            <span class="bf-price"><span class="bf-old">40 €</span><strong class="bf-new">30 €</strong><span class="bf-discount">−25 %</span></span><span class="bf-note">Offre Black Friday : remise appliquée uniquement aux anciens albums. Le nouvel album « Cœur battant » conserve son prix habituel de 15 €.</span>
 			CD WILD "I don't mind"<br>
 			+ CD ALIEN POE "Les enfants du désordre"<br>			 
 			+ CD TOM DARBON "Intact"<br>	
@@ -571,7 +590,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '40.00' // 💰 remplace par ton prix
+									value: '30.00' // 💰 remplace par ton prix
 								},
 								description: 'PACK 4 CD : Alien Poe "Les enfants du désordre" + WILD "I dont mind" + Tom Darbon "Intact" + "Coeur battant"'
 							}]
@@ -595,7 +614,7 @@
 			<img src="img/LA TOTALE NOIR.jpg" alt="PACK LA TOTALE">
 			<h2>PACK "LA TOTALE"</h2>
 			<p>
-            <b>65 euros</b><br>
+            <span class="bf-price"><span class="bf-old">65 €</span><strong class="bf-new">50 €</strong><span class="bf-discount">−23 %</span></span><span class="bf-note">Offre Black Friday : remise appliquée uniquement aux anciens albums. Le nouvel album « Cœur battant » conserve son prix habituel de 15 €.</span>
 			CD WILD "I don't mind"<br>			 
 			+ CD ALIEN POE "Les enfants du désordre"<br>
 			+ CD TOM DARBON "Intact"<br>
@@ -620,7 +639,7 @@
 						return actions.order.create({
 							purchase_units: [{
 								amount: {
-									value: '65.00' // 💰 remplace par ton prix
+									value: '50.00' // 💰 remplace par ton prix
 								},
 								description: 'La TOTALE Tom Darbon "Intact" (CD + VINYLE) + CD Tom Darbon "Coeur battant" + CD WILD + CD ALIEN POE'
 							}]
